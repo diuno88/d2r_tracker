@@ -48,3 +48,7 @@ window_overay.png
 
 # API keys (sensitive)
 tracker_config_keys.json
+
+# Installer / build config (developer-only)
+*.iss
+rthook_paddle.py

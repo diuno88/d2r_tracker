@@ -5,7 +5,8 @@ set CONDA_ENV=d2r-tracker
 for %%I in ("%~dp0..") do set TRACKER_DIR=%%~fI
 set DIST_DIR=%TRACKER_DIR%\dist\D2R_Tracker
 set EXE_OUT=%DIST_DIR%\D2R_Tracker.exe
-set ZIP_OUT=%TRACKER_DIR%\dist\D2R_Tracker.zip
+set ISS_FILE=%TRACKER_DIR%\scripts\D2R_Tracker_Setup.iss
+set ISCC="C:\Users\ycc\AppData\Local\Programs\Inno Setup 6\ISCC.exe"
 
 echo.
 echo ============================================================
@@ -75,18 +76,21 @@ if exist "%TRACKER_DIR%\data\" (
 ) else ( echo      WARN: data\ not found )
 
 echo.
-echo [6/6] Creating ZIP...
-powershell -NoProfile -Command "Compress-Archive -Path '%DIST_DIR%' -DestinationPath '%ZIP_OUT%' -Force"
-if !errorlevel! neq 0 ( echo ERROR: ZIP creation failed & pause & exit /b 1 )
-for %%F in ("%ZIP_OUT%") do set ZIP_SIZE=%%~zF
-set /a ZIP_MB=!ZIP_SIZE! / 1048576
-echo      OK  (!ZIP_MB! MB)
+echo [6/6] Creating installer (Inno Setup)...
+if not exist %ISCC% (
+    echo ERROR: Inno Setup not found at %ISCC%
+    echo        https://jrsoftware.org/isdl.php 에서 설치 후 재시도하세요.
+    pause & exit /b 1
+)
+%ISCC% "%ISS_FILE%"
+if !errorlevel! neq 0 ( echo ERROR: Inno Setup build failed & pause & exit /b 1 )
+echo      OK  -^> dist\D2R_Tracker_Setup.exe
 
 echo.
 echo ============================================================
 echo  Done
-echo  Folder : %DIST_DIR%
-echo  ZIP    : %ZIP_OUT%
+echo  Folder    : %DIST_DIR%
+echo  Installer : %TRACKER_DIR%\dist\D2R_Tracker_Setup.exe
 echo ============================================================
 echo.
 pause
