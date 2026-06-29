@@ -1,0 +1,2933 @@
+[
+  {
+    "id": 1869,
+    "name": "{{value}}% Reanimate as: Returned",
+    "koKR": "% Reanimate as: Returned",
+    "global": false
+  },
+  {
+    "id": 1798,
+    "name": "+{{value}}% Enhanced Maximum Damage (Based on Character Level)",
+    "koKR": "% 강화된 렙당최대피해(풀스옵)",
+    "global": false
+  },
+  {
+    "id": 411,
+    "name": "{{value}}% Bonus to Attack Rating (Based on Character Level)",
+    "koKR": "% 렙당명중률보너스(렙당어레)",
+    "global": false
+  },
+  {
+    "id": 536,
+    "name": "+{{value}} to Attack Rating (Based on Character Level)",
+    "koKR": "명중률(캐릭터 레벨에 비례)",
+    "global": false
+  },
+  {
+    "id": 438,
+    "name": "+{{value}} to Life (Based on Character Level)",
+    "koKR": "생명력(캐릭터 레벨에 비례)",
+    "global": false
+  },
+  {
+    "id": 535,
+    "name": "+{{value}} to Maximum Damage (Based on Character Level)",
+    "koKR": "최대피해(캐릭터 레벨에 비례)",
+    "global": false
+  },
+  {
+    "id": 979,
+    "name": "+{{value}} to Blade Mastery (Barbarian Only)",
+    "koKR": "Blade Mastery (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1550,
+    "name": "+{{value}} to Summon Goatman (Warlock Only)",
+    "koKR": "Summon Goatman (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1568,
+    "name": "+{{value}} to Cleave (Warlock Only)",
+    "koKR": "가르기 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1032,
+    "name": "+{{value}} to Thorns (Paladin Only)",
+    "koKR": "가시 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 574,
+    "name": "+{{value}} to Iron Maiden (Necromancer Only)",
+    "koKR": "가시 박힌 철관 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 973,
+    "name": "+{{value}} to Spirit of Barbs (Druid Only)",
+    "koKR": "가시의 영혼 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1144,
+    "name": "to Penetrate (Amazon Only)",
+    "koKR": "간파 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1059,
+    "name": "+{{value}} to Shock Web (Assassin Only)",
+    "koKR": "감전 그물 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 978,
+    "name": "+{{value}} to Bash (Barbarian Only)",
+    "koKR": "강격 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 498,
+    "name": "+{{value}} to Necromancer Skill Levels",
+    "koKR": "강령술사 기술 레벨",
+    "global": false
+  },
+  {
+    "id": 1022,
+    "name": "+{{value}} to Iron Golem (Necromancer Only)",
+    "koKR": "강철 골렘 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1028,
+    "name": "+{{value}} to Smite (Paladin Only)",
+    "koKR": "강타 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 567,
+    "name": "+{{value}}% Chance of Crushing Blow",
+    "koKR": "강타 확률(강한 타격 확률)",
+    "global": false
+  },
+  {
+    "id": 1569,
+    "name": "+{{value}} to Mirrored Blades (Warlock Only)",
+    "koKR": "거울상 칼날 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 776,
+    "name": "+{{value}}% to Experience Gained",
+    "koKR": "경험치 획득량",
+    "global": false
+  },
+  {
+    "id": 1012,
+    "name": "+{{value}} to Golem Mastery (Necromancer Only)",
+    "koKR": "골렘 숙련 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 805,
+    "name": "+{{value}} to Werebear (Druid Only)",
+    "koKR": "곰인간 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 457,
+    "name": "+{{value}}% Increased Attack Speed",
+    "koKR": "공격 속도",
+    "global": false
+  },
+  {
+    "id": 997,
+    "name": "+{{value}} to Increased Speed (Barbarian Only)",
+    "koKR": "공격 속도 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 444,
+    "name": "+{{value}} to Offensive Auras (Paladin Only)",
+    "koKR": "공격 오라 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 611,
+    "name": "Attacker Takes Lightning Damage of {{value}}",
+    "koKR": "공격자가 번개 피해를 받음",
+    "global": false
+  },
+  {
+    "id": 415,
+    "name": "Attacker Takes Damage of {{value}}",
+    "koKR": "공격자가 피해를 받음",
+    "global": false
+  },
+  {
+    "id": 1560,
+    "name": "+{{value}} to Levitation Mastery (Warlock Only)",
+    "koKR": "공중 부양 숙련 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1011,
+    "name": "+{{value}} to Terror (Necromancer Only)",
+    "koKR": "공포 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1147,
+    "name": "to Pierce (Amazon Only)",
+    "koKR": "관통 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 608,
+    "name": "+{{value}}% Piercing Attack",
+    "koKR": "관통 공격",
+    "global": false
+  },
+  {
+    "id": 965,
+    "name": "+{{value}} to Rabies (Druid Only)",
+    "koKR": "광견병 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 845,
+    "name": "+{{value}} to Frenzy (Barbarian Only)",
+    "koKR": "광분 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1045,
+    "name": "+{{value}} to Fanaticism (Paladin Only)",
+    "koKR": "광신 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1157,
+    "name": "+{{value}} to Summon Dire Wolf (Druid Only)",
+    "koKR": "광포한 늑대 소환 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 998,
+    "name": "+{{value}} to Berserk (Barbarian Only)",
+    "koKR": "광폭화 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 460,
+    "name": "{{value}}% Extra Gold from Monsters",
+    "koKR": "괴물에게서 얻는 금화 증가",
+    "global": false
+  },
+  {
+    "id": 1048,
+    "name": "+{{value}} to Salvation (Paladin Only)",
+    "koKR": "구원 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 969,
+    "name": "+{{value}} to Hunger (Druid Only)",
+    "koKR": "굶주림 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1121,
+    "name": "+{{value}} to Fissure (Druid Only)",
+    "koKR": "균열 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 409,
+    "name": "+{{value}} to Shadow Disciplines (Assassin Only)",
+    "koKR": "그림자 단련 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1080,
+    "name": "+{{value}} to Shadow Master (Assassin Only)",
+    "koKR": "그림자 달인 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1066,
+    "name": "+{{value}} to Cloak of Shadows (Assassin Only)",
+    "koKR": "그림자 망토 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1070,
+    "name": "+{{value}} to Shadow Warrior (Assassin Only)",
+    "koKR": "그림자 전사 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 957,
+    "name": "+{{value}} to Arctic Blast (Druid Only)",
+    "koKR": "극지 돌풍 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 615,
+    "name": "+{{value}} Defense vs. Melee",
+    "koKR": "근접 공격 방어력",
+    "global": false
+  },
+  {
+    "id": 1547,
+    "name": "+{{value}} to Eldritch Skills (Warlock Only)",
+    "koKR": "기괴 기술 + (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1561,
+    "name": "+{{value}} to Eldritch Blast (Warlock Only)",
+    "koKR": "기괴한 작렬 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1030,
+    "name": "+{{value}} to Prayer (Paladin Only)",
+    "koKR": "기도 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 990,
+    "name": "+{{value}} to Stun (Barbarian Only)",
+    "koKR": "기절 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 669,
+    "name": "+{{value}} to Impale (Amazon Only)",
+    "koKR": "꿰뚫기 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1557,
+    "name": "+{{value}} to Blood Boil (Warlock Only)",
+    "koKR": "끓는 피 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1139,
+    "name": "to Fend (Amazon Only)",
+    "koKR": "난격 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 431,
+    "name": "Repairs {{value}} durability per second",
+    "koKR": "내구도 회복 (매초)",
+    "global": false
+  },
+  {
+    "id": 1140,
+    "name": "to Inner Sight (Amazon Only)",
+    "koKR": "내면의 시야 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 705,
+    "name": "+{{value}} to Chilling Armor (Sorceress Only)",
+    "koKR": "냉기 갑옷 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 517,
+    "name": "+{{value}} to Cold Skills (Sorceress Only)",
+    "koKR": "냉기 기술 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 747,
+    "name": "+{{value}}% to Cold Skill Damage",
+    "koKR": "냉기 기술 피해",
+    "global": false
+  },
+  {
+    "id": 1053,
+    "name": "+{{value}} to Cold Mastery (Sorceress Only)",
+    "koKR": "냉기 숙련 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 426,
+    "name": "Cold Resist +{{value}}%",
+    "koKR": "냉기 저항",
+    "global": false
+  },
+  {
+    "id": 1034,
+    "name": "+{{value}} to Resist Cold (Paladin Only)",
+    "koKR": "냉기 저항 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 548,
+    "name": "{{value}} Cold Damage",
+    "koKR": "냉기 피해",
+    "global": false
+  },
+  {
+    "id": 1134,
+    "name": "to Cold Arrow (Amazon Only)",
+    "koKR": "냉기 화살 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 702,
+    "name": "+{{value}} Cold Absorb",
+    "koKR": "냉기 흡수",
+    "global": false
+  },
+  {
+    "id": 1019,
+    "name": "+{{value}} to Decrepify (Necromancer Only)",
+    "koKR": "노화 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 945,
+    "name": "+{{value}} to Thunder Storm (Sorceress Only)",
+    "koKR": "뇌우 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 703,
+    "name": "+{{value}} to Blizzard (Sorceress Only)",
+    "koKR": "눈보라 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1163,
+    "name": "+{{value}} to Werewolf (Druid Only)",
+    "koKR": "늑대인간 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1150,
+    "name": "to Multiple Shot (Amazon Only)",
+    "koKR": "다발 사격 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 480,
+    "name": "+{{value}}% Faster Run/Walk",
+    "koKR": "달리기/걷기 속도",
+    "global": false
+  },
+  {
+    "id": 584,
+    "name": "Slows Target by {{value}}%",
+    "koKR": "대상 감속",
+    "global": false
+  },
+  {
+    "id": 570,
+    "name": "Freezes target +{{value}}",
+    "koKR": "대상 빙결",
+    "global": false
+  },
+  {
+    "id": 593,
+    "name": "-{{value}}% Target Defense",
+    "koKR": "대상의 방어력 -",
+    "global": false
+  },
+  {
+    "id": 1033,
+    "name": "+{{value}} to Defiance (Paladin Only)",
+    "koKR": "대항 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 408,
+    "name": "+{{value}} to Traps (Assassin Only)",
+    "koKR": "덫 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 980,
+    "name": "+{{value}} to Axe Mastery (Barbarian Only)",
+    "koKR": "도끼 숙련 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 988,
+    "name": "+{{value}} to Taunt (Barbarian Only)",
+    "koKR": "도발 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 618,
+    "name": "+{{value}} to Leap (Barbarian Only)",
+    "koKR": "도약 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 994,
+    "name": "+{{value}} to Leap Attack (Barbarian Only)",
+    "koKR": "도약 공격 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 783,
+    "name": "+{{value}}% to Poison Skill Damage",
+    "koKR": "독 기술 피해",
+    "global": false
+  },
+  {
+    "id": 401,
+    "name": "Poison Resist +{{value}}%",
+    "koKR": "독 저항",
+    "global": false
+  },
+  {
+    "id": 1021,
+    "name": "+{{value}} to Summon Resist (Necromancer Only)",
+    "koKR": "독 저항 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 419,
+    "name": "Poison Length Reduced by {{value}}%",
+    "koKR": "독 지속시간 감소",
+    "global": false
+  },
+  {
+    "id": 1863,
+    "name": "+{{value}} cold damage over {{duration}} seconds",
+    "koKR": "냉기 피해 (초에 걸쳐)",
+    "global": false
+  },
+  {
+    "id": 518,
+    "name": "+{{value}} poison damage over {{duration}} seconds",
+    "koKR": "독 피해 (초에 걸쳐)",
+    "global": false
+  },
+  {
+    "id": 589,
+    "name": "{{value}} Poison Damage",
+    "koKR": "독 피해 흡수",
+    "global": false
+  },
+  {
+    "id": 500,
+    "name": "+{{value}} to Poison and Bone Skills (Necromancer Only)",
+    "koKR": "독과 뼈 기술 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1572,
+    "name": "+{{value}} to Miasma Bolt (Warlock Only)",
+    "koKR": "독기 볼트 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1576,
+    "name": "+{{value}} to Miasma Chain (Warlock Only)",
+    "koKR": "독기 사슬 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 967,
+    "name": "+{{value}} to Twister (Druid Only)",
+    "koKR": "돌개바람 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 488,
+    "name": "+{{value}} to Druid Skill Levels",
+    "koKR": "드루이드 기술 레벨",
+    "global": false
+  },
+  {
+    "id": 774,
+    "name": "Level {{value}} Iron Maiden ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 가시 박힌 철관",
+    "global": false
+  },
+  {
+    "id": 733,
+    "name": "Level {{value}} Spirit of Barbs ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 가시의 영혼",
+    "global": false
+  },
+  {
+    "id": 489,
+    "name": "Level {{value}} Bash ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 강격",
+    "global": false
+  },
+  {
+    "id": 773,
+    "name": "Level {{value}} Iron Golem ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 강철 골렘",
+    "global": false
+  },
+  {
+    "id": 451,
+    "name": "Level {{value}} Terror ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 공포",
+    "global": false
+  },
+  {
+    "id": 761,
+    "name": "Level {{value}} Summon Dire Wolf ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 광포한 늑대 소환",
+    "global": false
+  },
+  {
+    "id": 556,
+    "name": "Level {{value}} Fissure ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 균열",
+    "global": false
+  },
+  {
+    "id": 688,
+    "name": "Level {{value}} Cloak of Shadows ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 그림자 망토",
+    "global": false
+  },
+  {
+    "id": 490,
+    "name": "Level {{value}} Stun ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 기절",
+    "global": false
+  },
+  {
+    "id": 465,
+    "name": "Level {{value}} Inner Sight ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 내면의 시야",
+    "global": false
+  },
+  {
+    "id": 466,
+    "name": "Level {{value}} Cold Arrow ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 냉기 화살",
+    "global": false
+  },
+  {
+    "id": 626,
+    "name": "Level {{value}} Decrepify ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 노화",
+    "global": false
+  },
+  {
+    "id": 560,
+    "name": "Level {{value}} Blizzard ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 눈보라",
+    "global": false
+  },
+  {
+    "id": 467,
+    "name": "Level {{value}} Multiple Shot ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 다발 사격",
+    "global": false
+  },
+  {
+    "id": 1860,
+    "name": "Level {{value}} Miasma Bolt ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 독기 볼트",
+    "global": false
+  },
+  {
+    "id": 527,
+    "name": "Level {{value}} Twister ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 돌개바람",
+    "global": false
+  },
+  {
+    "id": 565,
+    "name": "Level {{value}} Magic Arrow ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 마법 화살",
+    "global": false
+  },
+  {
+    "id": 533,
+    "name": "Level {{value}} Enchant ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 마법부여",
+    "global": false
+  },
+  {
+    "id": 748,
+    "name": "Level {{value}} Venom ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 맹독",
+    "global": false
+  },
+  {
+    "id": 475,
+    "name": "Level {{value}} Poison Dagger ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 맹독 단도",
+    "global": false
+  },
+  {
+    "id": 775,
+    "name": "Level {{value}} Poison Creeper ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 맹독 덩굴",
+    "global": false
+  },
+  {
+    "id": 697,
+    "name": "Level {{value}} Poison Explosion ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 맹독 폭발",
+    "global": false
+  },
+  {
+    "id": 476,
+    "name": "Level {{value}} Poison Nova ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 맹독 확산",
+    "global": false
+  },
+  {
+    "id": 529,
+    "name": "Level {{value}} Lightning ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 번개",
+    "global": false
+  },
+  {
+    "id": 522,
+    "name": "Level {{value}} Charged Bolt ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 번개 줄기",
+    "global": false
+  },
+  {
+    "id": 450,
+    "name": "Level {{value}} Nova ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 번개 파장",
+    "global": false
+  },
+  {
+    "id": 473,
+    "name": "Level {{value}} Lightning Strike ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 번개의 일격",
+    "global": false
+  },
+  {
+    "id": 496,
+    "name": "Level {{value}} Vengeance ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 복수",
+    "global": false
+  },
+  {
+    "id": 741,
+    "name": "Level {{value}} Revive ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 부활",
+    "global": false
+  },
+  {
+    "id": 464,
+    "name": "Level {{value}} Fire Arrow ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 불꽃 화살",
+    "global": false
+  },
+  {
+    "id": 472,
+    "name": "Level {{value}} Freezing Arrow ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 빙결 화살",
+    "global": false
+  },
+  {
+    "id": 559,
+    "name": "Level {{value}} Glacial Spike ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 빙하 가시",
+    "global": false
+  },
+  {
+    "id": 772,
+    "name": "Level {{value}} Bone Prison ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 뼈 감옥",
+    "global": false
+  },
+  {
+    "id": 509,
+    "name": "Level {{value}} Bone Spirit ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 뼈 영혼",
+    "global": false
+  },
+  {
+    "id": 506,
+    "name": "Level {{value}} Bone Spear ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 뼈 창",
+    "global": false
+  },
+  {
+    "id": 505,
+    "name": "Level {{value}} Life Tap ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 생명력 추출",
+    "global": false
+  },
+  {
+    "id": 524,
+    "name": "Level {{value}} Frost Nova ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 서릿발",
+    "global": false
+  },
+  {
+    "id": 492,
+    "name": "Level {{value}} Grim Ward ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 섬뜩한 호신부",
+    "global": false
+  },
+  {
+    "id": 526,
+    "name": "Level {{value}} Teleport ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 순간이동",
+    "global": false
+  },
+  {
+    "id": 503,
+    "name": "Level {{value}} Dim Vision ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 시야 흐리기",
+    "global": false
+  },
+  {
+    "id": 693,
+    "name": "Level {{value}} Corpse Explosion ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 시체 폭발",
+    "global": false
+  },
+  {
+    "id": 494,
+    "name": "Level {{value}} Holy Bolt ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 신성한 빛줄기",
+    "global": false
+  },
+  {
+    "id": 474,
+    "name": "Level {{value}} Weaken ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 약화",
+    "global": false
+  },
+  {
+    "id": 561,
+    "name": "Level {{value}} Frozen Orb ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 얼음 보주",
+    "global": false
+  },
+  {
+    "id": 525,
+    "name": "Level {{value}} Ice Blast ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 얼음 작렬",
+    "global": false
+  },
+  {
+    "id": 470,
+    "name": "Level {{value}} Ice Arrow ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 얼음 화살",
+    "global": false
+  },
+  {
+    "id": 558,
+    "name": "Level {{value}} Ice Bolt ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 얼음살",
+    "global": false
+  },
+  {
+    "id": 734,
+    "name": "Level {{value}} Plague Javelin ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 역병 투창",
+    "global": false
+  },
+  {
+    "id": 564,
+    "name": "Level {{value}} Chain Lightning ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 연쇄 번개",
+    "global": false
+  },
+  {
+    "id": 495,
+    "name": "Level {{value}} Zeal ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 열의",
+    "global": false
+  },
+  {
+    "id": 523,
+    "name": "Level {{value}} Telekinesis ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 염력",
+    "global": false
+  },
+  {
+    "id": 554,
+    "name": "Level {{value}} Meteor ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 운석 낙하",
+    "global": false
+  },
+  {
+    "id": 732,
+    "name": "Level {{value}} Heart of Wolverine ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 울버린의 심장",
+    "global": false
+  },
+  {
+    "id": 507,
+    "name": "Level {{value}} Attract ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 유혹",
+    "global": false
+  },
+  {
+    "id": 1861,
+    "name": "Level {{value}} Sigil: Lethargy ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 인장: 무기력",
+    "global": false
+  },
+  {
+    "id": 1858,
+    "name": "Level {{value}} Sigil: Rancor ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 인장: 울분",
+    "global": false
+  },
+  {
+    "id": 508,
+    "name": "Level {{value}} Lower Resist ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 저항 감소",
+    "global": false
+  },
+  {
+    "id": 468,
+    "name": "Level {{value}} Power Strike ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 전기의 일격",
+    "global": false
+  },
+  {
+    "id": 471,
+    "name": "Level {{value}} Charged Strike ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 전류의 일격",
+    "global": false
+  },
+  {
+    "id": 740,
+    "name": "Level {{value}} Immolation Arrow ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 점화 화살",
+    "global": false
+  },
+  {
+    "id": 1859,
+    "name": "Level {{value}} Apocalypse ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 종말",
+    "global": false
+  },
+  {
+    "id": 491,
+    "name": "Level {{value}} Concentrate ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 집중 공격",
+    "global": false
+  },
+  {
+    "id": 725,
+    "name": "Level {{value}} Oak Sage ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 참나무 현자",
+    "global": false
+  },
+  {
+    "id": 497,
+    "name": "Level {{value}} Blessed Hammer ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 축복받은 망치",
+    "global": false
+  },
+  {
+    "id": 777,
+    "name": "Level {{value}} Raven ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 큰까마귀",
+    "global": false
+  },
+  {
+    "id": 469,
+    "name": "Level {{value}} Exploding Arrow ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 폭발 화살",
+    "global": false
+  },
+  {
+    "id": 720,
+    "name": "Level {{value}} Blood Golem ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 피 골렘",
+    "global": false
+  },
+  {
+    "id": 648,
+    "name": "Level {{value}} Amplify Damage ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 피해 증폭",
+    "global": false
+  },
+  {
+    "id": 504,
+    "name": "Level {{value}} Confuse ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 혼란",
+    "global": false
+  },
+  {
+    "id": 557,
+    "name": "Level {{value}} Volcano ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 화산",
+    "global": false
+  },
+  {
+    "id": 552,
+    "name": "Level {{value}} Fire Ball ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 화염구",
+    "global": false
+  },
+  {
+    "id": 661,
+    "name": "Level {{value}} Fire Wall ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 화염벽",
+    "global": false
+  },
+  {
+    "id": 521,
+    "name": "Level {{value}} Fire Bolt ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 화염탄",
+    "global": false
+  },
+  {
+    "id": 555,
+    "name": "Level {{value}} Firestorm ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 화염폭풍",
+    "global": false
+  },
+  {
+    "id": 528,
+    "name": "Level {{value}} Tornado ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 회오리바람",
+    "global": false
+  },
+  {
+    "id": 493,
+    "name": "Level {{value}} Sacrifice ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 희생",
+    "global": false
+  },
+  {
+    "id": 651,
+    "name": "Level {{value}} Hydra ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨 히드라",
+    "global": false
+  },
+  {
+    "id": 502,
+    "name": "Level {{value}} Teeth ({{charges}}/{{charges}} Charges)",
+    "koKR": "레벨이빨 개",
+    "global": false
+  },
+  {
+    "id": 569,
+    "name": "Regenerate Mana {{value}}%",
+    "koKR": "마나 재생",
+    "global": false
+  },
+  {
+    "id": 421,
+    "name": "+{{value}} to Energy",
+    "koKR": "마력",
+    "global": false
+  },
+  {
+    "id": 679,
+    "name": "+{{value}} to Energy Shield (Sorceress Only)",
+    "koKR": "마력 보호막 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1879,
+    "name": "+{{value}}% to Magic Skill Damage",
+    "koKR": "마법 기술 피해",
+    "global": false
+  },
+  {
+    "id": 461,
+    "name": "{{value}}% Better Chance of Getting Magic Items",
+    "koKR": "마법 아이템 발견 확률 증가",
+    "global": false
+  },
+  {
+    "id": 936,
+    "name": "Magic Resist +{{value}}%",
+    "koKR": "마법 저항",
+    "global": false
+  },
+  {
+    "id": 654,
+    "name": "{{value}} Magic Damage",
+    "koKR": "마법 피해",
+    "global": false
+  },
+  {
+    "id": 414,
+    "name": "Magic Damage Reduced by {{value}}",
+    "koKR": "마법 피해 감소",
+    "global": false
+  },
+  {
+    "id": 1148,
+    "name": "to Magic Arrow (Amazon Only)",
+    "koKR": "마법 화살 발사 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 944,
+    "name": "+{{value}} to Enchant (Sorceress Only)",
+    "koKR": "마법부여 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1878,
+    "name": "+{{value}} to Town Portal",
+    "koKR": "마을 차원문",
+    "global": false
+  },
+  {
+    "id": 449,
+    "name": "+{{value}}% Faster Block Rate",
+    "koKR": "막기 속도",
+    "global": false
+  },
+  {
+    "id": 446,
+    "name": "{{value}}% Increased Chance of Blocking",
+    "koKR": "막기 확률 증가",
+    "global": false
+  },
+  {
+    "id": 1079,
+    "name": "+{{value}} to Venom (Assassin Only)",
+    "koKR": "맹독 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1008,
+    "name": "+{{value}} to Poison Dagger (Necromancer Only)",
+    "koKR": "맹독 단도 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 951,
+    "name": "+{{value}} to Poison Creeper (Druid Only)",
+    "koKR": "맹독 덩굴 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1136,
+    "name": "to Poison Javelin (Amazon Only)",
+    "koKR": "맹독 투창 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1016,
+    "name": "+{{value}} to Poison Explosion (Necromancer Only)",
+    "koKR": "맹독 폭발 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1024,
+    "name": "+{{value}} to Poison Nova (Necromancer Only)",
+    "koKR": "맹독 확산 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1565,
+    "name": "+{{value}} to Echoing Strike (Warlock Only)",
+    "koKR": "메아리치는 타격 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1044,
+    "name": "+{{value}} to Meditation (Paladin Only)",
+    "koKR": "명상 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 423,
+    "name": "+{{value}} to Attack Rating",
+    "koKR": "명중률",
+    "global": false
+  },
+  {
+    "id": 424,
+    "name": "{{value}}% Bonus to Attack Rating",
+    "koKR": "명중률 보너스",
+    "global": false
+  },
+  {
+    "id": 587,
+    "name": "+{{value}} to All Skills",
+    "koKR": "모든 기술",
+    "global": false
+  },
+  {
+    "id": 727,
+    "name": "+{{value}} to all Attributes",
+    "koKR": "모든 능력치",
+    "global": false
+  },
+  {
+    "id": 441,
+    "name": "+{{value}} to All Resistances",
+    "koKR": "모든 저항",
+    "global": false
+  },
+  {
+    "id": 999,
+    "name": "+{{value}} to Natural Resistance (Barbarian Only)",
+    "koKR": "모든 저항 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1065,
+    "name": "+{{value}} to Weapon Block (Assassin Only)",
+    "koKR": "무기 막기 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 410,
+    "name": "+{{value}} to Martial Arts (Assassin Only)",
+    "koKR": "무술 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 983,
+    "name": "+{{value}} to Find Potion (Barbarian Only)",
+    "koKR": "물약 발견 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1145,
+    "name": "to Decoy (Amazon Only)",
+    "koKR": "미끼 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 985,
+    "name": "+{{value}} to Polearm Mastery (Barbarian Only)",
+    "koKR": "미늘창 숙련 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 429,
+    "name": "+{{value}} to Dexterity",
+    "koKR": "민첩",
+    "global": false
+  },
+  {
+    "id": 1865,
+    "name": "Physical Damage Received Reduced by {{value}}%",
+    "koKR": "받는 물리 피해 감소",
+    "global": false
+  },
+  {
+    "id": 849,
+    "name": "to Valkyrie (Amazon Only)",
+    "koKR": "발키리 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 445,
+    "name": "+{{value}} to Defensive Auras (Paladin Only)",
+    "koKR": "방어 오라 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 425,
+    "name": "+{{value}}% Enhanced Defense",
+    "koKR": "방어력 증가",
+    "global": false
+  },
+  {
+    "id": 399,
+    "name": "+{{value}} Defense",
+    "koKR": "방어력:",
+    "global": false
+  },
+  {
+    "id": 1049,
+    "name": "+{{value}} to Lightning (Sorceress Only)",
+    "koKR": "번개 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 516,
+    "name": "+{{value}} to Lightning Skills (Sorceress Only)",
+    "koKR": "번개 기술 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 743,
+    "name": "+{{value}}% to Lightning Skill Damage",
+    "koKR": "번개 기술 피해",
+    "global": false
+  },
+  {
+    "id": 428,
+    "name": "Lightning Resist +{{value}}%",
+    "koKR": "번개 저항",
+    "global": false
+  },
+  {
+    "id": 1038,
+    "name": "+{{value}} to Resist Lightning (Paladin Only)",
+    "koKR": "번개 저항 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 707,
+    "name": "+{{value}} to Lightning Strike (Amazon Only)",
+    "koKR": "번개 저항 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 946,
+    "name": "+{{value}} to Charged Bolt (Sorceress Only)",
+    "koKR": "번개 줄기 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1064,
+    "name": "+{{value}} to Charged Bolt Sentry (Assassin Only)",
+    "koKR": "번개 줄기 파수기 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 948,
+    "name": "+{{value}} to Nova (Sorceress Only)",
+    "koKR": "번개 파장 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 550,
+    "name": "{{value}} Lightning Damage",
+    "koKR": "번개 피해",
+    "global": false
+  },
+  {
+    "id": 689,
+    "name": "+{{value}} Lightning Absorb",
+    "koKR": "번개 흡수",
+    "global": false
+  },
+  {
+    "id": 745,
+    "name": "+{{value}} to Lightning Bolt (Amazon Only)",
+    "koKR": "번개 흡수 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1073,
+    "name": "+{{value}} to Lightning Sentry (Assassin Only)",
+    "koKR": "번개 흡수 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1051,
+    "name": "+{{value}} to Lightning Mastery (Sorceress Only)",
+    "koKR": "번개 흡수 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 708,
+    "name": "+{{value}} to Lightning Fury (Amazon Only)",
+    "koKR": "번개의 격노 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 486,
+    "name": "+{{value}} to Shape Shifting Skills (Druid Only)",
+    "koKR": "변신 기술 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1118,
+    "name": "+{{value}} to Lycanthropy (Druid Only)",
+    "koKR": "변신술 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 577,
+    "name": "+{{value}} to Vengeance (Paladin Only)",
+    "koKR": "복수 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1026,
+    "name": "+{{value}} to Revive (Necromancer Only)",
+    "koKR": "부활 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 975,
+    "name": "+{{value}} to Fury (Druid Only)",
+    "koKR": "분노 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1068,
+    "name": "+{{value}} to Blade Fury (Assassin Only)",
+    "koKR": "분노의 칼날 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 604,
+    "name": "+{{value}} to Blaze (Sorceress Only)",
+    "koKR": "불길 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1149,
+    "name": "to Fire Arrow (Amazon Only)",
+    "koKR": "불꽃 화살 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1122,
+    "name": "+{{value}} to Phoenix Strike (Assassin Only)",
+    "koKR": "불사조 일격 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1116,
+    "name": "+{{value}} to Wake of Fire (Assassin Only)",
+    "koKR": "불의 파동 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1152,
+    "name": "to Freezing Arrow (Amazon Only)",
+    "koKR": "빙결 화살 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 704,
+    "name": "+{{value}} to Glacial Spike (Sorceress Only)",
+    "koKR": "빙하 가시 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1020,
+    "name": "+{{value}} to Bone Prison (Necromancer Only)",
+    "koKR": "뼈 감옥 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 755,
+    "name": "+{{value}} to Bone Armor (Necromancer Only)",
+    "koKR": "뼈 갑옷 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 757,
+    "name": "+{{value}} to Bone Spirit (Necromancer Only)",
+    "koKR": "뼈 영혼 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 756,
+    "name": "+{{value}} to Bone Spear (Necromancer Only)",
+    "koKR": "뼈 창 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 758,
+    "name": "+{{value}} to Bone Wall (Necromancer Only)",
+    "koKR": "뼈의 벽 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 764,
+    "name": "Reduces all Vendor Prices {{value}}%",
+    "koKR": "상점 물품 가격 하락",
+    "global": false
+  },
+  {
+    "id": 566,
+    "name": "+{{value}}% Chance of Open Wounds",
+    "koKR": "상처 악화 확률",
+    "global": false
+  },
+  {
+    "id": 418,
+    "name": "+{{value}} to Life",
+    "koKR": "생명력",
+    "global": false
+  },
+  {
+    "id": 1015,
+    "name": "+{{value}} to Life Tap (Necromancer Only)",
+    "koKR": "생명력 추출 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 417,
+    "name": "Replenish Life +{{value}}",
+    "koKR": "생명력 회복",
+    "global": false
+  },
+  {
+    "id": 605,
+    "name": "+{{value}} to Frost Nova (Sorceress Only)",
+    "koKR": "서릿발 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1046,
+    "name": "+{{value}} to Conviction (Paladin Only)",
+    "koKR": "선고 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 664,
+    "name": "+{{value}} to Grim Ward (Barbarian Only)",
+    "koKR": "섬뜩한 호신부 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 442,
+    "name": "+{{value}} to Paladin Skill Levels",
+    "koKR": "성기사 기술 레벨",
+    "global": false
+  },
+  {
+    "id": 1043,
+    "name": "+{{value}} to Sanctuary (Paladin Only)",
+    "koKR": "성역 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1558,
+    "name": "+{{value}} to Consume (Warlock Only)",
+    "koKR": "소모 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 650,
+    "name": "+{{value}} to Whirlwind (Barbarian Only)",
+    "koKR": "소용돌이 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 501,
+    "name": "+{{value}} to Summoning Skills (Necromancer Only)",
+    "koKR": "소환 기술 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 485,
+    "name": "+{{value}} to Summoning Skills (Druid Only)",
+    "koKR": "소환 기술 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 683,
+    "name": "+{{value}} to Strafe (Amazon Only)",
+    "koKR": "속사 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1047,
+    "name": "+{{value}} to Redemption (Paladin Only)",
+    "koKR": "속죄 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1055,
+    "name": "+{{value}} to Claw Mastery (Assassin Only)",
+    "koKR": "손톱 숙련 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 405,
+    "name": "+{{value}} to Masteries (Barbarian Only)",
+    "koKR": "숙련 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 677,
+    "name": "+{{value}} to Teleport (Sorceress Only)",
+    "koKR": "순간이동 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 422,
+    "name": "+{{value}} to Light Radius",
+    "koKR": "시야",
+    "global": false
+  },
+  {
+    "id": 1006,
+    "name": "+{{value}} to Dim Vision (Necromancer Only)",
+    "koKR": "시야 흐리기 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 520,
+    "name": "+{{value}}% Faster Cast Rate",
+    "koKR": "시전 속도",
+    "global": false
+  },
+  {
+    "id": 1009,
+    "name": "+{{value}} to Corpse Explosion (Necromancer Only)",
+    "koKR": "시체 폭발 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1042,
+    "name": "+{{value}} to Holy Shield (Paladin Only)",
+    "koKR": "신성한 방패 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 588,
+    "name": "+{{value}} to Holy Fire (Paladin Only)",
+    "koKR": "신성한 불꽃 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 639,
+    "name": "+{{value}} to Holy Freeze (Paladin Only)",
+    "koKR": "신성한 빙결 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 642,
+    "name": "+{{value}} to Holy Bolt (Paladin Only)",
+    "koKR": "신성한 빛줄기 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 580,
+    "name": "+{{value}} to Holy Shock (Paladin Only)",
+    "koKR": "신성한 충격 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1579,
+    "name": "+{{value}} to Abyss (Warlock Only)",
+    "koKR": "심연 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 976,
+    "name": "+{{value}} to Armageddon (Druid Only)",
+    "koKR": "아마겟돈 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 453,
+    "name": "+{{value}} to Amazon Skill Levels",
+    "koKR": "아마존 기술 레벨",
+    "global": false
+  },
+   {
+    "id": 1862,
+    "name": "+{{value}} to Warlock Skill Levels",
+    "koKR": "악마술사 기술 레벨",
+    "global": false
+  },
+  {
+    "id": 993,
+    "name": "+{{value}} to Find Item (Barbarian Only)",
+    "koKR": "아이템 발견 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1546,
+    "name": "+{{value}} to Demon Skills (Warlock Only)",
+    "koKR": "악마 기술 + (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1559,
+    "name": "+{{value}} to Bind Demon (Warlock Only)",
+    "koKR": "악마 속박 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1551,
+    "name": "+{{value}} to Demonic Mastery (Warlock Only)",
+    "koKR": "악마 숙련 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 637,
+    "name": "+{{value}} Life after each Demon Kill",
+    "koKR": "악마 처치 시 생명력",
+    "global": false
+  },
+  {
+    "id": 512,
+    "name": "+{{value}} to Attack Rating against Demons",
+    "koKR": "악마에 대한 명중률",
+    "global": false
+  },
+  {
+    "id": 513,
+    "name": "+{{value}}% Damage to Demons",
+    "koKR": "악마에게 주는 피해",
+    "global": false
+  },
+  {
+    "id": 519,
+    "name": "+{{value}} to Assassin Skill Levels",
+    "koKR": "암살자 기술 레벨",
+    "global": false
+  },
+  {
+    "id": 403,
+    "name": "+{{value}} to Barbarian Skill Levels",
+    "koKR": "야만용사 기술 레벨",
+    "global": false
+  },
+  {
+    "id": 1007,
+    "name": "+{{value}} to Weaken (Necromancer Only)",
+    "koKR": "약화 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 537,
+    "name": "+{{value}} to Attack Rating against Undead",
+    "koKR": "언데드에 대한 명중률",
+    "global": false
+  },
+  {
+    "id": 538,
+    "name": "+{{value}}% Damage to Undead",
+    "koKR": "언데드에게 주는 피해",
+    "global": false
+  },
+  {
+    "id": 940,
+    "name": "+{{value}} to Frozen Armor (Sorceress Only)",
+    "koKR": "얼어붙은 갑옷 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1052,
+    "name": "+{{value}} to Frozen Orb (Sorceress Only)",
+    "koKR": "얼음 보주 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 941,
+    "name": "+{{value}} to Ice Blast (Sorceress Only)",
+    "koKR": "얼음 작렬 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1075,
+    "name": "+{{value}} to Blades of Ice (Assassin Only)",
+    "koKR": "얼음 칼날 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1151,
+    "name": "to Ice Arrow (Amazon Only)",
+    "koKR": "얼음 화살 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 939,
+    "name": "+{{value}} to Ice Bolt (Sorceress Only)",
+    "koKR": "얼음살 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1138,
+    "name": "to Plague Javelin (Amazon Only)",
+    "koKR": "역병 투창 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 598,
+    "name": "+{{value}} to Chain Lightning (Sorceress Only)",
+    "koKR": "연쇄 번개 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 875,
+    "name": "+{{value}} to Zeal (Paladin Only)",
+    "koKR": "열의 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 678,
+    "name": "+{{value}} to Telekinesis (Sorceress Only)",
+    "koKR": "염력 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 955,
+    "name": "+{{value}} to Summon Spirit Wolf (Druid Only)",
+    "koKR": "영혼 늑대 소환 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1553,
+    "name": "+{{value}} to Summon Tainted (Warlock Only)",
+    "koKR": "오염된 자 소환 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 942,
+    "name": "+{{value}} to Shiver Armor (Sorceress Only)",
+    "koKR": "오한 갑옷 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 597,
+    "name": "+{{value}} to Warmth (Sorceress Only)",
+    "koKR": "온기 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 989,
+    "name": "+{{value}} to Shout (Barbarian Only)",
+    "koKR": "외침 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1072,
+    "name": "+{{value}} to Dragon Tail (Assassin Only)",
+    "koKR": "용의 꼬리 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1058,
+    "name": "+{{value}} to Dragon Talon (Assassin Only)",
+    "koKR": "용의 발톱 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1076,
+    "name": "+{{value}} to Dragon Flight (Assassin Only)",
+    "koKR": "용의 비상 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1063,
+    "name": "+{{value}} to Dragon Claw (Assassin Only)",
+    "koKR": "용의 손톱 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 943,
+    "name": "+{{value}} to Meteor (Sorceress Only)",
+    "koKR": "운석 낙하 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 963,
+    "name": "+{{value}} to Heart of Wolverine (Druid Only)",
+    "koKR": "울버린의 심장 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 612,
+    "name": "+{{value}} Defense vs. Missile",
+    "koKR": "원거리 공격 방어력",
+    "global": false
+  },
+  {
+    "id": 619,
+    "name": "+{{value}} to Vigor (Paladin Only)",
+    "koKR": "원기 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 487,
+    "name": "+{{value}} to Elemental Skills (Druid Only)",
+    "koKR": "원소 기술 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 739,
+    "name": "{{value}} Elemental Damage",
+    "koKR": "원소 피해",
+    "global": false
+  },
+  {
+    "id": 514,
+    "name": "+{{value}} to Sorceress Skill Levels",
+    "koKR": "원소술사 기술 레벨",
+    "global": false
+  },
+  {
+    "id": 1029,
+    "name": "+{{value}} to Might (Paladin Only)",
+    "koKR": "위세 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1104,
+    "name": "+{{value}} to Guided Arrow (Amazon Only)",
+    "koKR": "유도 화살 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1018,
+    "name": "+{{value}} to Attract (Necromancer Only)",
+    "koKR": "유혹 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1003,
+    "name": "+{{value}} to Teeth (Necromancer Only)",
+    "koKR": "이빨 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 984,
+    "name": "+{{value}} to Double Swing (Barbarian Only)",
+    "koKR": "이중 타격 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 991,
+    "name": "+{{value}} to Double Throw (Barbarian Only)",
+    "koKR": "이중 투척 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1570,
+    "name": "+{{value}} to Sigil: Lethargy (Warlock Only)",
+    "koKR": "인장: 무기력 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1573,
+    "name": "+{{value}} to Sigil: Rancor (Warlock Only)",
+    "koKR": "인장: 울분 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1577,
+    "name": "+{{value}} to Sigil: Death (Warlock Only)",
+    "koKR": "인장: 죽음 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 881,
+    "name": "Level {{value}} Concentration Aura When Equipped",
+    "koKR": "장착 시 레벨 집중 오라 효과 적용",
+    "global": false
+  },
+  {
+    "id": 1906,
+    "name": "Level {{value}} Resist Fire Aura When Equipped",
+    "koKR": "장착 시 레벨 화염 저항 오라 효과 적용",
+    "global": false
+  },
+  {
+    "id": 726,
+    "name": "Level {{value}} Sanctuary Aura When Equipped",
+    "koKR": "장착 시 레벨 성역 오라 효과 적용",
+    "global": false
+  },
+  {
+    "id": 499,
+    "name": "+{{value}} to Curses (Necromancer Only)",
+    "koKR": "저주받음 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1023,
+    "name": "+{{value}} to Lower Resist (Necromancer Only)",
+    "koKR": "저항 감소 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1877,
+    "name": "-{{value}}% to Enemy Magic Resistance",
+    "koKR": "적 마법 저항 -",
+    "global": false
+  },
+  {
+    "id": 1881,
+    "name": "-{{value}}% to Enemy Physical Damage Resistance",
+    "koKR": "적 물리 피해 저항 -",
+    "global": false
+  },
+  {
+    "id": 511,
+    "name": "+{{value}} to Mana after each Kill",
+    "koKR": "적 처치 시 마나",
+    "global": false
+  },
+  {
+    "id": 721,
+    "name": "+{{value}} Life after each Kill",
+    "koKR": "적 처치 시 생명력",
+    "global": false
+  },
+  {
+    "id": 609,
+    "name": "-{{value}}% to Enemy Cold Resistance",
+    "koKR": "적의 냉기 저항 -",
+    "global": false
+  },
+  {
+    "id": 723,
+    "name": "-{{value}}% to Enemy Poison Resistance",
+    "koKR": "적의 독 저항 -",
+    "global": false
+  },
+  {
+    "id": 736,
+    "name": "-{{value}}% to Enemy Lightning Resistance",
+    "koKR": "적의 번개 저항 -",
+    "global": false
+  },
+  {
+    "id": 735,
+    "name": "-{{value}}% to Enemy Fire Resistance",
+    "koKR": "적의 화염 저항 -",
+    "global": false
+  },
+  {
+    "id": 534,
+    "name": "Hit Causes Monster to Flee +{{value}}%",
+    "koKR": "적중 시 괴물 도주",
+    "global": false
+  },
+  {
+    "id": 568,
+    "name": "Hit Blinds Target +{{value}}",
+    "koKR": "적중 시 대상 실명",
+    "global": false
+  },
+  {
+    "id": 530,
+    "name": "{{value}} to Monster Defense Per Hit",
+    "koKR": "적중당 괴물 방어력 감소",
+    "global": false
+  },
+  {
+    "id": 463,
+    "name": "{{value}}% Mana stolen per hit",
+    "koKR": "적중당 마나 훔침",
+    "global": false
+  },
+  {
+    "id": 462,
+    "name": "{{value}}% Life stolen per hit",
+    "koKR": "적중당 생명력 훔침",
+    "global": false
+  },
+  {
+    "id": 670,
+    "name": "+{{value}} to Power Strike (Amazon Only)",
+    "koKR": "전기의 일격 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1137,
+    "name": "to Charged Strike (Amazon Only)",
+    "koKR": "전류의 일격 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 949,
+    "name": "+{{value}} to Static Field (Sorceress Only)",
+    "koKR": "전자기장 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1000,
+    "name": "+{{value}} to War Cry (Barbarian Only)",
+    "koKR": "전장의 함성 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 443,
+    "name": "+{{value}} to Combat Skills (Paladin Only)",
+    "koKR": "전투 기술 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 404,
+    "name": "+{{value}} to Combat Skills (Barbarian Only)",
+    "koKR": "전투 기술 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1001,
+    "name": "+{{value}} to Battle Command (Barbarian Only)",
+    "koKR": "전투 명령 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 765,
+    "name": "+{{value}} to Battle Orders (Barbarian Only)",
+    "koKR": "전투 지시 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 931,
+    "name": "+{{value}} to Battle Cry (Barbarian Only)",
+    "koKR": "전투의 함성 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1041,
+    "name": "+{{value}} to Conversion (Paladin Only)",
+    "koKR": "전향 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1010,
+    "name": "+{{value}} to Clay Golem (Necromancer Only)",
+    "koKR": "점토 골렘 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 682,
+    "name": "+{{value}} to Immolation Arrow (Amazon Only)",
+    "koKR": "점화 화살 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1564,
+    "name": "+{{value}} to Psychic Ward (Warlock Only)",
+    "koKR": "정신 결계 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1074,
+    "name": "+{{value}} to Mind Blast (Assassin Only)",
+    "koKR": "정신 폭발 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1056,
+    "name": "+{{value}} to Psychic Hammer (Assassin Only)",
+    "koKR": "정신의 망치 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1037,
+    "name": "+{{value}} to Cleansing (Paladin Only)",
+    "koKR": "정화 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1578,
+    "name": "+{{value}} to Apocalypse (Warlock Only)",
+    "koKR": "종말 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1562,
+    "name": "+{{value}} to Hex: Bane (Warlock Only)",
+    "koKR": "주술: 재앙 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1566,
+    "name": "+{{value}} to Hex: Purge (Warlock Only)",
+    "koKR": "주술: 처단 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1563,
+    "name": "+{{value}} to Hex: Siphon (Warlock Only)",
+    "koKR": "주술: 흡수 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1077,
+    "name": "+{{value}} to Death Sentry (Assassin Only)",
+    "koKR": "죽음 파수기 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1552,
+    "name": "+{{value}} to Death Mark (Warlock Only)",
+    "koKR": "죽음의 징표 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 992,
+    "name": "+{{value}} to Increased Stamina (Barbarian Only)",
+    "koKR": "중첩 수량 증가 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 481,
+    "name": "{{value}}% Slower Stamina Drain",
+    "koKR": "지구력 고갈 속도 감소",
+    "global": false
+  },
+  {
+    "id": 477,
+    "name": "Heal Stamina Plus {{value}}%",
+    "koKR": "지구력 회복 속도 증가",
+    "global": false
+  },
+  {
+    "id": 455,
+    "name": "+{{value}} to Passive and Magic Skills (Amazon Only)",
+    "koKR": "지속 효과와 마법 기술 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 759,
+    "name": "+{{value}} to Inferno (Sorceress Only)",
+    "koKR": "지옥불 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 769,
+    "name": "+{{value}} to Wake of Inferno (Assassin Only)",
+    "koKR": "지옥불의 파동 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1040,
+    "name": "+{{value}} to Concentration (Paladin Only)",
+    "koKR": "집중 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 995,
+    "name": "+{{value}} to Concentrate (Barbarian Only)",
+    "koKR": "집중 공격 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1135,
+    "name": "to Jab (Amazon Only)",
+    "koKR": "찌르기 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 420,
+    "name": "Requirements +{{value}}%",
+    "koKR": "착용 조건",
+    "global": false
+  },
+  {
+    "id": 954,
+    "name": "+{{value}} to Oak Sage (Druid Only)",
+    "koKR": "참나무 현자 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 987,
+    "name": "+{{value}} to Spear Mastery (Barbarian Only)",
+    "koKR": "창 숙련 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1071,
+    "name": "+{{value}} to Claws of Thunder (Assassin Only)",
+    "koKR": "천둥의 손톱 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 581,
+    "name": "+{{value}} to Fist of the Heavens (Paladin Only)",
+    "koKR": "천상의 주먹 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 996,
+    "name": "+{{value}} to Iron Skin (Barbarian Only)",
+    "koKR": "철갑 피부 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 981,
+    "name": "+{{value}} to Mace Mastery (Barbarian Only)",
+    "koKR": "철퇴 숙련 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1153,
+    "name": "+{{value}} to Carrion Vine (Druid Only)",
+    "koKR": "청소부 덩굴 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 616,
+    "name": "+{{value}}% to Maximum Cold Resist",
+    "koKR": "최대 냉기 저항",
+    "global": false
+  },
+  {
+    "id": 483,
+    "name": "+{{value}} to Maximum Cold Damage",
+    "koKR": "최대 냉기 피해",
+    "global": false
+  },
+  {
+    "id": 592,
+    "name": "+{{value}}% to Maximum Poison Resist",
+    "koKR": "최대 독 저항",
+    "global": false
+  },
+  {
+    "id": 540,
+    "name": "+{{value}} to Maximum Poison Damage",
+    "koKR": "최대 독 피해",
+    "global": false
+  },
+  {
+    "id": 617,
+    "name": "Increase Maximum Mana {{value}}%",
+    "koKR": "최대 마나 증가",
+    "global": false
+  },
+  {
+    "id": 658,
+    "name": "+{{value}}% to Maximum Lightning Resist",
+    "koKR": "최대 번개 저항",
+    "global": false
+  },
+  {
+    "id": 479,
+    "name": "+{{value}} to Maximum Lightning Damage",
+    "koKR": "최대 번개 피해",
+    "global": false
+  },
+  {
+    "id": 673,
+    "name": "Increase Maximum Life {{value}}%",
+    "koKR": "최대 생명력 증가",
+    "global": false
+  },
+  {
+    "id": 452,
+    "name": "+{{value}} Maximum Stamina",
+    "koKR": "최대 지구력",
+    "global": false
+  },
+  {
+    "id": 448,
+    "name": "+{{value}} to Maximum Damage",
+    "koKR": "최대 피해",
+    "global": false
+  },
+  {
+    "id": 594,
+    "name": "+{{value}}% to Maximum Fire Resist",
+    "koKR": "최대 화염 저항",
+    "global": false
+  },
+  {
+    "id": 459,
+    "name": "+{{value}} to Maximum Fire Damage",
+    "koKR": "최대 화염 피해",
+    "global": false
+  },
+  {
+    "id": 482,
+    "name": "+{{value}} to Minimum Cold Damage",
+    "koKR": "최소 냉기 피해",
+    "global": false
+  },
+  {
+    "id": 539,
+    "name": "+{{value}} to Minimum Poison Damage",
+    "koKR": "최소 독 피해",
+    "global": false
+  },
+  {
+    "id": 478,
+    "name": "+{{value}} to Minimum Lightning Damage",
+    "koKR": "최소 번개 피해",
+    "global": false
+  },
+  {
+    "id": 416,
+    "name": "+{{value}} to Minimum Damage",
+    "koKR": "최소 피해",
+    "global": false
+  },
+  {
+    "id": 458,
+    "name": "+{{value}} to Minimum Fire Damage",
+    "koKR": "최소 화염 피해",
+    "global": false
+  },
+  {
+    "id": 1036,
+    "name": "+{{value}} to Blessed Aim (Paladin Only)",
+    "koKR": "축복받은 조준 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1039,
+    "name": "+{{value}} to Blessed Hammer (Paladin Only)",
+    "koKR": "축복받은 망치 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 970,
+    "name": "+{{value}} to Shock Wave (Druid Only)",
+    "koKR": "충격파 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1035,
+    "name": "+{{value}} to Charge (Paladin Only)",
+    "koKR": "충전 횟수: (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1864,
+    "name": "+{{value}}%Chance of Deadly Strike",
+    "koKR": "치명적 공격",
+    "global": false
+  },
+  {
+    "id": 858,
+    "name": "to Critical Strike (Amazon Only)",
+    "koKR": "치명타 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1078,
+    "name": "+{{value}} to Blade Shield (Assassin Only)",
+    "koKR": "칼날 방패 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1567,
+    "name": "+{{value}} to Blade Warp (Warlock Only)",
+    "koKR": "칼날 이동 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1067,
+    "name": "+{{value}} to Cobra Strike (Assassin Only)",
+    "koKR": "코브라 일격 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 950,
+    "name": "+{{value}} to Raven (Druid Only)",
+    "koKR": "큰까마귀 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 430,
+    "name": "+{{value}}% Faster Hit Recovery",
+    "koKR": "타격 회복 속도",
+    "global": false
+  },
+  {
+    "id": 956,
+    "name": "+{{value}} to Molten Boulder (Druid Only)",
+    "koKR": "타오르는 바위 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1155,
+    "name": "+{{value}} to Solar Creeper (Druid Only)",
+    "koKR": "태양의 덩굴 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1142,
+    "name": "to Slow Missiles (Amazon Only)",
+    "koKR": "투사체 감속 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 456,
+    "name": "+{{value}} to Javelin and Spear Skills (Amazon Only)",
+    "koKR": "투창과 창 기술 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 986,
+    "name": "+{{value}} to Throwing Mastery (Barbarian Only)",
+    "koKR": "투척 숙련 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1554,
+    "name": "+{{value}} to Summon Defiler (Warlock Only)",
+    "koKR": "파멸자 소환 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1060,
+    "name": "+{{value}} to Blade Sentinel (Assassin Only)",
+    "koKR": "파수꾼의 칼날 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1556,
+    "name": "+{{value}} to Engorge (Warlock Only)",
+    "koKR": "포식 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 982,
+    "name": "+{{value}} to Howl (Barbarian Only)",
+    "koKR": "포효 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 610,
+    "name": "+{{value}} to Exploding Arrow (Amazon Only)",
+    "koKR": "폭발 화살 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1061,
+    "name": "+{{value}} to Burst of Speed (Assassin Only)",
+    "koKR": "폭발적인 속도 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1017,
+    "name": "+{{value}} to Blood Golem (Necromancer Only)",
+    "koKR": "피 골렘 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1555,
+    "name": "+{{value}} to Blood Oath (Warlock Only)",
+    "koKR": "피의 맹세 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1146,
+    "name": "to Evade (Amazon Only)",
+    "koKR": "피하기 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 413,
+    "name": "Damage Reduced by {{value}}",
+    "koKR": "피해 감소",
+    "global": false
+  },
+  {
+    "id": 510,
+    "name": "+{{value}}% Enhanced Damage",
+    "koKR": "피해 증가",
+    "global": false
+  },
+  {
+    "id": 1002,
+    "name": "+{{value}} to Amplify Damage (Necromancer Only)",
+    "koKR": "피해 증폭 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 439,
+    "name": "{{value}} Damage",
+    "koKR": "피해:",
+    "global": false
+  },
+  {
+    "id": 406,
+    "name": "+{{value}} to Warcries (Barbarian Only)",
+    "koKR": "함성 (야만용사 전용)",
+    "global": false
+  },
+  {
+    "id": 1005,
+    "name": "+{{value}} to Raise Skeleton (Necromancer Only)",
+    "koKR": "해골 되살리기 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1013,
+    "name": "+{{value}} to Raise Skeletal Mage (Necromancer Only)",
+    "koKR": "해골 마법학자 되살리기 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1004,
+    "name": "+{{value}} to Skeleton Mastery (Necromancer Only)",
+    "koKR": "해골 숙련 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1574,
+    "name": "+{{value}} to Enhanced Entropy (Warlock Only)",
+    "koKR": "향상된 엔트로피 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 977,
+    "name": "+{{value}} to Hurricane (Druid Only)",
+    "koKR": "허리케인 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1057,
+    "name": "+{{value}} to Tiger Strike (Assassin Only)",
+    "koKR": "호랑이 일격 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1548,
+    "name": "+{{value}} to Chaos Skills (Warlock Only)",
+    "koKR": "혼돈 기술 + (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1014,
+    "name": "+{{value}} to Confuse (Necromancer Only)",
+    "koKR": "혼란 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 402,
+    "name": "Socketed ({{value}})",
+    "koKR": "홈 있음",
+    "global": false
+  },
+  {
+    "id": 971,
+    "name": "+{{value}} to Volcano (Druid Only)",
+    "koKR": "화산 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1571,
+    "name": "+{{value}} to Ring of Fire (Warlock Only)",
+    "koKR": "화염 고리 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1025,
+    "name": "+{{value}} to Fire Golem (Necromancer Only)",
+    "koKR": "화염 골렘 (강령술사 전용)",
+    "global": false
+  },
+  {
+    "id": 586,
+    "name": "+{{value}} to Fire Skills",
+    "koKR": "화염 기술",
+    "global": false
+  },
+  {
+    "id": 515,
+    "name": "+{{value}} to Fire Skills (Sorceress Only)",
+    "koKR": "화염 기술 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 750,
+    "name": "+{{value}}% to Fire Skill Damage",
+    "koKR": "화염 기술 피해",
+    "global": false
+  },
+  {
+    "id": 966,
+    "name": "+{{value}} to Fire Claws (Druid Only)",
+    "koKR": "화염 발톱 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1050,
+    "name": "+{{value}} to Fire Mastery (Sorceress Only)",
+    "koKR": "화염 숙련 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1054,
+    "name": "+{{value}} to Fire Blast (Assassin Only)",
+    "koKR": "화염 작렬 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 427,
+    "name": "Fire Resist +{{value}}%",
+    "koKR": "화염 저항",
+    "global": false
+  },
+  {
+    "id": 1031,
+    "name": "+{{value}} to Resist Fire (Paladin Only)",
+    "koKR": "화염 저항 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 1575,
+    "name": "+{{value}} to Flame Wave (Warlock Only)",
+    "koKR": "화염 파도 (악마술사 전용)",
+    "global": false
+  },
+  {
+    "id": 549,
+    "name": "{{value}} Fire Damage",
+    "koKR": "화염 피해",
+    "global": false
+  },
+  {
+    "id": 659,
+    "name": "+{{value}} Fire Absorb",
+    "koKR": "화염 흡수",
+    "global": false
+  },
+  {
+    "id": 602,
+    "name": "+{{value}} to Fire Ball (Sorceress Only)",
+    "koKR": "화염구 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 601,
+    "name": "+{{value}} to Fire Wall (Sorceress Only)",
+    "koKR": "화염벽 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 1062,
+    "name": "+{{value}} to Fists of Fire (Assassin Only)",
+    "koKR": "화염의 주먹 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 596,
+    "name": "+{{value}} to Fire Bolt (Sorceress Only)",
+    "koKR": "화염탄 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 953,
+    "name": "+{{value}} to Firestorm (Druid Only)",
+    "koKR": "화염폭풍 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 454,
+    "name": "+{{value}} to Bow and Crossbow Skills (Amazon Only)",
+    "koKR": "활과 쇠뇌 기술 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 582,
+    "name": "+{{value}} to Vitality",
+    "koKR": "활력",
+    "global": false
+  },
+  {
+    "id": 974,
+    "name": "+{{value}} to Summon Grizzly (Druid Only)",
+    "koKR": "회색곰 소환 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 962,
+    "name": "+{{value}} to Cyclone Armor (Druid Only)",
+    "koKR": "회오리 갑옷 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 972,
+    "name": "+{{value}} to Tornado (Druid Only)",
+    "koKR": "회오리바람 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1143,
+    "name": "to Avoid (Amazon Only)",
+    "koKR": "회피 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 960,
+    "name": "+{{value}} to Maul (Druid Only)",
+    "koKR": "후려치기 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 959,
+    "name": "+{{value}} to Feral Rage (Druid Only)",
+    "koKR": "흉포한 격노 (드루이드 전용)",
+    "global": false
+  },
+  {
+    "id": 1069,
+    "name": "+{{value}} to Fade (Assassin Only)",
+    "koKR": "흐리기 (암살자 전용)",
+    "global": false
+  },
+  {
+    "id": 1141,
+    "name": "to Dodge (Amazon Only)",
+    "koKR": "흘리기 (아마존 전용)",
+    "global": false
+  },
+  {
+    "id": 1027,
+    "name": "+{{value}} to Sacrifice (Paladin Only)",
+    "koKR": "희생 (성기사 전용)",
+    "global": false
+  },
+  {
+    "id": 749,
+    "name": "+{{value}} to Hydra (Sorceress Only)",
+    "koKR": "히드라 (원소술사 전용)",
+    "global": false
+  },
+  {
+    "id": 437,
+    "name": "+{{value}} to Strength",
+    "koKR": "힘",
+    "global": false
+  },
+  {
+    "id":803,
+    "name": "Level {{value}} Fanaticism Aura When Equipped",
+    "koKR":"광신 오라 장착시",
+    "global":false
+  },
+  {
+    "id": 694,
+    "name": "Chance to cast level Blizzard when struck",
+    "koKR": "피격시 레벨 눈보라 시전 확률",
+    "global": false
+  },
+  {
+    "id": 760,
+    "name": "to Werewolf (Druid Only)",
+    "koKR": "늑대인간 (드루이드전용)",
+    "global": false
+  },
+  {
+    "id": 810,
+    "name": "Level _ Thorns Aura When Equipped",
+    "koKR": "레벨 _ 가시 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 818,
+    "name": "Magic Absorb",
+    "koKR": "마법 흡수",
+    "global": false
+  },
+  {
+    "id": 827,
+    "name": "Level _ Holy Freeze Aura When Equipped",
+    "koKR": "레벨 _ 신성한 빙결 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 831,
+    "name": "Level _ Holy Fire Aura When Equipped",
+    "koKR": "레벨 _ 신성한 불꽃 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 834,
+    "name": "Level _ Holy Shock Aura When Equipped",
+    "koKR": "레벨 _ 신성한 충격 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 839,
+    "name": "Level _ Defiance Aura When Equipped",
+    "koKR": "레벨 _ 인내 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 848,
+    "name": "Level _ Vigor Aura When Equipped",
+    "koKR": "레벨 _ 원기 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 854,
+    "name": "Level _ Conviction Aura When Equipped",
+    "koKR": "레벨 _ 선고 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 859,
+    "name": "Level _ Meditation Aura When Equipped",
+    "koKR": "레벨 _ 명상 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 864,
+    "name": "Level _ Might Aura When Equipped",
+    "koKR": "레벨 _ 위세 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 880,
+    "name": "Level _ Redemption Aura When Equipped",
+    "koKR": "레벨 _ 속죄 오라 장착시",
+    "global": false
+  },
+  {
+    "id": 1199,
+    "name": "to Werebear (Any Class)",
+    "koKR": " 곰인간 (Any Class)",
+    "global": false
+  },
+  {
+    "id": 1200,
+    "name": "to Lycanthropy (Any Class)",
+    "koKR": " 변신술 (Any Class)",
+    "global": false
+  },
+  {
+    "id": 1201,
+    "name": "to Battle Command (Any Class)",
+    "koKR": " 전투 명령 (Any Class)",
+    "global": false
+  },
+  {
+    "id": 1202,
+    "name": "to Battle Cry (Any Class)",
+    "koKR": " 전투의 함성 (Any Class)",
+    "global": false
+  },
+  {
+    "id": 1203,
+    "name": "to Battle Orders (Any Class)",
+    "koKR": " 전투 지시 (Any Class)",
+    "global": false
+  },
+  {
+    "id":400,
+    "name":"+{{value}} to Mana",
+    "koKR":"마나",
+    "global":false
+  },
+  {
+    "id":937,
+    "name":"Increase Maximum Durability",
+    "koKR":"최대 내구도 증가",
+    "global":false
+  },
+  {
+    "id":1857,
+    "name":"Damage",
+    "koKR":"피해",
+    "global":false
+  },
+  {
+    "id":628,
+    "name":"Charged Bolt on striking",
+    "koKR":"타격 시 번개 줄기 시전",
+    "global":false
+  },
+  {
+    "id":1223,
+    "name":"Damage Increased",
+    "koKR":"받는 물리피해 증가",
+    "global":false
+  }
+
+  
+  
+]

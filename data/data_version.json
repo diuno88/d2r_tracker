@@ -1,0 +1,15 @@
+{
+  "updated_at": "2026-06-23T21:19:11.996605",
+  "source": "https://raw.githubusercontent.com/diuno88/d2r_kain/main/",
+  "files": [
+    "baseItemList.json",
+    "craftedResult.json",
+    "d2r_affixes_detailed.json",
+    "item-category.json",
+    "ladderSeason.json",
+    "optionCombo.json",
+    "runWordsResult.json",
+    "setItemList.json",
+    "uniqueResult.json"
+  ]
+}

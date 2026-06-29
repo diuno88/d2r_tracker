@@ -1,0 +1,670 @@
+[
+  {
+    "id": "4200365670",
+    "type": "craft",
+    "ctg": "Amulet",
+    "name": "Blood Amulet",
+    "korName": "블러드목걸이",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_amulet.png",
+    "nameId": "blood-amulet",
+    "tags": [
+      {
+        "tag_id": 210,
+        "tag": "Amulet"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "2500857221",
+    "type": "craft",
+    "ctg": "Belt",
+    "name": "Blood Belt",
+    "korName": "블러드벨트",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_belt.png",
+    "nameId": "blood-belt",
+    "tags": [
+      {
+        "tag_id": 166,
+        "tag": "Belt"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "3416551289",
+    "type": "craft",
+    "ctg": "Body Armor",
+    "name": "Blood Body",
+    "korName": "블러드갑옷",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_body.png",
+    "nameId": "blood-body",
+    "tags": [
+      {
+        "tag_id": 155,
+        "tag": "Body Armor"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "3181060013",
+    "type": "craft",
+    "ctg": "Boot",
+    "name": "Blood Boots",
+    "korName": "블러드부츠",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_boots.png",
+    "nameId": "blood-boots",
+    "tags": [
+      {
+        "tag_id": 165,
+        "tag": "Boot"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "2918851501",
+    "type": "craft",
+    "ctg": "Glove",
+    "name": "Blood Gloves",
+    "korName": "블러드장갑",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_gloves.png",
+    "nameId": "blood-gloves",
+    "tags": [
+      {
+        "tag_id": 160,
+        "tag": "Glove"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "3961784773",
+    "type": "craft",
+    "ctg": "Helm",
+    "name": "Blood Helm",
+    "korName": "블러드투구",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_helm.png",
+    "nameId": "blood-helm",
+    "tags": [
+      {
+        "tag_id": 145,
+        "tag": "Helm"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "3658180761",
+    "type": "craft",
+    "ctg": "Ring",
+    "name": "Blood Ring",
+    "korName": "블러드반지",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_ring.png",
+    "nameId": "blood-ring",
+    "tags": [
+      {
+        "tag_id": 211,
+        "tag": "Ring"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "2214820074",
+    "type": "craft",
+    "ctg": "Shield",
+    "name": "Blood Shield",
+    "korName": "블러드방패",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_shield.png",
+    "nameId": "blood-shield",
+    "tags": [
+      {
+        "tag_id": 156,
+        "tag": "Shield"
+      },
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "3043562459",
+    "type": "craft",
+    "ctg": "",
+    "name": "Blood Weapon",
+    "korName": "블러드무기",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/blood_weapon.png",
+    "nameId": "blood-weapon",
+    "tags": [
+      {
+        "tag_id": 277,
+        "tag": "Blood"
+      }
+    ]
+  },
+  {
+    "id": "2942659282",
+    "type": "craft",
+    "ctg": "Amulet",
+    "name": "Caster Amulet",
+    "korName": "캐스터목걸이",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_amulet.png",
+    "nameId": "caster-amulet",
+    "tags": [
+      {
+        "tag_id": 210,
+        "tag": "Amulet"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "3550938582",
+    "type": "craft",
+    "ctg": "Belt",
+    "name": "Caster Belt",
+    "korName": "캐스터벨트",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_belt.png",
+    "nameId": "caster-belt",
+    "tags": [
+      {
+        "tag_id": 166,
+        "tag": "Belt"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "3742245551",
+    "type": "craft",
+    "ctg": "Body Armor",
+    "name": "Caster Body",
+    "korName": "캐스터갑옷",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_body.png",
+    "nameId": "caster-body",
+    "tags": [
+      {
+        "tag_id": 155,
+        "tag": "Body Armor"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "3370209349",
+    "type": "craft",
+    "ctg": "Boot",
+    "name": "Caster Boots",
+    "korName": "캐스터부츠",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_boots.png",
+    "nameId": "caster-boots",
+    "tags": [
+      {
+        "tag_id": 165,
+        "tag": "Boot"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "4281795035",
+    "type": "craft",
+    "ctg": "Glove",
+    "name": "Caster Gloves",
+    "korName": "캐스터장갑",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_gloves.png",
+    "nameId": "caster-gloves",
+    "tags": [
+      {
+        "tag_id": 160,
+        "tag": "Glove"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "3267975309",
+    "type": "craft",
+    "ctg": "Helm",
+    "name": "Caster Helm",
+    "korName": "캐스터투구",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_helm.png",
+    "nameId": "caster-helm",
+    "tags": [
+      {
+        "tag_id": 145,
+        "tag": "Helm"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "2334733908",
+    "type": "craft",
+    "ctg": "Ring",
+    "name": "Caster Ring",
+    "korName": "캐스터반지",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_ring.png",
+    "nameId": "caster-ring",
+    "tags": [
+      {
+        "tag_id": 211,
+        "tag": "Ring"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "2826782298",
+    "type": "craft",
+    "ctg": "Shield",
+    "name": "Caster Shield",
+    "korName": "캐스터방패",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_shield.png",
+    "nameId": "caster-shield",
+    "tags": [
+      {
+        "tag_id": 156,
+        "tag": "Shield"
+      },
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "3128384746",
+    "type": "craft",
+    "ctg": "",
+    "name": "Caster Weapon",
+    "korName": "캐스터무기",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/caster_weapon.png",
+    "nameId": "caster-weapon",
+    "tags": [
+      {
+        "tag_id": 278,
+        "tag": "Caster"
+      }
+    ]
+  },
+  {
+    "id": "2488499381",
+    "type": "craft",
+    "ctg": "Amulet",
+    "name": "Hit Power Amulet",
+    "korName": "히트파워목걸이",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_amulet.png",
+    "nameId": "hit-power-amulet",
+    "tags": [
+      {
+        "tag_id": 210,
+        "tag": "Amulet"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "2266054173",
+    "type": "craft",
+    "ctg": "Belt",
+    "name": "Hit Power Belt",
+    "korName": "히트파워벨트",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_belt.png",
+    "nameId": "hit-power-belt",
+    "tags": [
+      {
+        "tag_id": 166,
+        "tag": "Belt"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "3846450927",
+    "type": "craft",
+    "ctg": "Body Armor",
+    "name": "Hit Power Body",
+    "korName": "히트파워갑옷",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_body.png",
+    "nameId": "hit-power-body",
+    "tags": [
+      {
+        "tag_id": 155,
+        "tag": "Body Armor"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "3310648836",
+    "type": "craft",
+    "ctg": "Boot",
+    "name": "Hit Power Boots",
+    "korName": "히트파워부츠",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_boots.png",
+    "nameId": "hit-power-boots",
+    "tags": [
+      {
+        "tag_id": 165,
+        "tag": "Boot"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "3612361822",
+    "type": "craft",
+    "ctg": "Glove",
+    "name": "Hit Power Gloves",
+    "korName": "히트파워장갑",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_gloves.png",
+    "nameId": "hit-power-gloves",
+    "tags": [
+      {
+        "tag_id": 160,
+        "tag": "Glove"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "2492426252",
+    "type": "craft",
+    "ctg": "Helm",
+    "name": "Hit Power Helm",
+    "korName": "히트파워투구",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_helm.png",
+    "nameId": "hit-power-helm",
+    "tags": [
+      {
+        "tag_id": 145,
+        "tag": "Helm"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "3311952660",
+    "type": "craft",
+    "ctg": "Ring",
+    "name": "Hit Power Ring",
+    "korName": "히트파워반지",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_ring.png",
+    "nameId": "hit-power-ring",
+    "tags": [
+      {
+        "tag_id": 211,
+        "tag": "Ring"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "3076789245",
+    "type": "craft",
+    "ctg": "Shield",
+    "name": "Hit Power Shield",
+    "korName": "히트파워방패",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_shield.png",
+    "nameId": "hit-power-shield",
+    "tags": [
+      {
+        "tag_id": 156,
+        "tag": "Shield"
+      },
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "4097341896",
+    "type": "craft",
+    "ctg": "",
+    "name": "Hit Power Weapon",
+    "korName": "히트파워무기",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/hit_power_weapon.png",
+    "nameId": "hit-power-weapon",
+    "tags": [
+      {
+        "tag_id": 279,
+        "tag": "Hit Power"
+      }
+    ]
+  },
+  {
+    "id": "2673754085",
+    "type": "craft",
+    "ctg": "Amulet",
+    "name": "Safety Amulet",
+    "korName": "세이프티목걸이",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_amulet.png",
+    "nameId": "safety-amulet",
+    "tags": [
+      {
+        "tag_id": 210,
+        "tag": "Amulet"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "4149228295",
+    "type": "craft",
+    "ctg": "Belt",
+    "name": "Safety Belt",
+    "korName": "세이프티벨트",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_belt.png",
+    "nameId": "safety-belt",
+    "tags": [
+      {
+        "tag_id": 166,
+        "tag": "Belt"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "3903523456",
+    "type": "craft",
+    "ctg": "Body Armor",
+    "name": "Safety Body",
+    "korName": "세이프티갑옷",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_body.png",
+    "nameId": "safety-body",
+    "tags": [
+      {
+        "tag_id": 155,
+        "tag": "Body Armor"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "2476824964",
+    "type": "craft",
+    "ctg": "Boot",
+    "name": "Safety Boots",
+    "korName": "세이프티부츠",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_boots.png",
+    "nameId": "safety-boots",
+    "tags": [
+      {
+        "tag_id": 165,
+        "tag": "Boot"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "2197239147",
+    "type": "craft",
+    "ctg": "Glove",
+    "name": "Safety Gloves",
+    "korName": "세이프티장갑",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_gloves.png",
+    "nameId": "safety-gloves",
+    "tags": [
+      {
+        "tag_id": 160,
+        "tag": "Glove"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "2708224698",
+    "type": "craft",
+    "ctg": "Helm",
+    "name": "Safety Helm",
+    "korName": "세이프티투구",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_helm.png",
+    "nameId": "safety-helm",
+    "tags": [
+      {
+        "tag_id": 145,
+        "tag": "Helm"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "3447419883",
+    "type": "craft",
+    "ctg": "Ring",
+    "name": "Safety Ring",
+    "korName": "세이프티반지",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_ring.png",
+    "nameId": "safety-ring",
+    "tags": [
+      {
+        "tag_id": 211,
+        "tag": "Ring"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "3506262297",
+    "type": "craft",
+    "ctg": "Shield",
+    "name": "Safety Shield",
+    "korName": "세이프티방패",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_shield.png",
+    "nameId": "safety-shield",
+    "tags": [
+      {
+        "tag_id": 156,
+        "tag": "Shield"
+      },
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  },
+  {
+    "id": "3829162316",
+    "type": "craft",
+    "ctg": "",
+    "name": "Safety Weapon",
+    "korName": "세이프티무기",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/crafted/safety_weapon.png",
+    "nameId": "safety-weapon",
+    "tags": [
+      {
+        "tag_id": 280,
+        "tag": "Safety"
+      }
+    ]
+  }
+]

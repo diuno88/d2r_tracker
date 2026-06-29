@@ -1,0 +1,28 @@
+[
+  {
+    "id":510,
+    "name":"Enhanced Damage",
+    "koKR":"피해 증가"
+  },
+  {
+    "id":423,
+    "name":"to Attack Rating",
+    "koKR":"명중률"
+  },
+    {
+    "id":425,
+    "name":"Enhanced Defense",
+    "koKR":"방어력 증가"
+  },
+  {
+    "id":441,
+    "name":"to All Resistances",
+    "koKR":"모든 저항"
+  },
+  {
+    "id":402,
+    "name":"Sockets",
+    "koKR":"홈",
+    "global":false
+  }
+]

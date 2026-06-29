@@ -1,0 +1,214 @@
+{
+  "El Rune": {
+    "no": 1,
+    "kor": "엘룬",
+    "prefix": "El",
+    "kor_pre": "엘"
+  },
+  "Eld Rune": {
+    "no": 2,
+    "kor": "엘드룬",
+    "prefix": "Eld",
+    "kor_pre": "엘드"
+  },
+  "Tir Rune": {
+    "no": 3,
+    "kor": "티르룬",
+    "prefix": "Tir",
+    "kor_pre": "티르"
+  },
+  "Nef Rune": {
+    "no": 4,
+    "kor": "네프룬",
+    "prefix": "Nef",
+    "kor_pre": "네프"
+  },
+  "Eth Rune": {
+    "no": 5,
+    "kor": "에드룬",
+    "prefix": "Eth",
+    "kor_pre": "에드"
+  },
+  "Ith Rune": {
+    "no": 6,
+    "kor": "아이드룬",
+    "prefix": "Ith",
+    "kor_pre": "아이드"
+  },
+  "Tal Rune": {
+    "no": 7,
+    "kor": "탈룬",
+    "prefix": "Tal",
+    "kor_pre": "탈"
+  },
+  "Ral Rune": {
+    "no": 8,
+    "kor": "랄룬",
+    "prefix": "Ral",
+    "kor_pre": "랄"
+  },
+  "Ort Rune": {
+    "no": 9,
+    "kor": "오르트룬",
+    "prefix": "Ort",
+    "kor_pre": "오르트"
+  },
+  "Thul Rune": {
+    "no": 10,
+    "kor": "주울룬",
+    "prefix": "Thul",
+    "kor_pre": "주울"
+  },
+  "Amn Rune": {
+    "no": 11,
+    "kor": "앰룬",
+    "prefix": "Amn",
+    "kor_pre": "앰"
+  },
+  "Sol Rune": {
+    "no": 12,
+    "kor": "솔룬",
+    "prefix": "Sol",
+    "kor_pre": "솔"
+  },
+  "Shael Rune": {
+    "no": 13,
+    "kor": "샤엘룬",
+    "prefix": "Shael",
+    "kor_pre": "샤엘"
+  },
+  "Dol Rune": {
+    "no": 14,
+    "kor": "돌룬",
+    "prefix": "Dol",
+    "kor_pre": "돌"
+  },
+  "Hel Rune": {
+    "no": 15,
+    "kor": "헬룬",
+    "prefix": "Hel",
+    "kor_pre": "헬"
+  },
+  "Io Rune": {
+    "no": 16,
+    "kor": "이오룬",
+    "prefix": "Io",
+    "kor_pre": "이오"
+  },
+  "Lum Rune": {
+    "no": 17,
+    "kor": "룸룬",
+    "prefix": "Lum",
+    "kor_pre": "룸"
+  },
+  "Ko Rune": {
+    "no": 18,
+    "kor": "코룬",
+    "prefix": "Ko",
+    "kor_pre": "코"
+  },
+  "Fal Rune": {
+    "no": 19,
+    "kor": "팔룬",
+    "prefix": "Fal",
+    "kor_pre": "팔"
+  },
+  "Lem Rune": {
+    "no": 20,
+    "kor": "렘룬",
+    "prefix": "Lem",
+    "kor_pre": "렘",
+    "price_rank":0
+  },
+  "Pul Rune": {
+    "no": 21,
+    "kor": "풀룬",
+    "prefix": "Pul",
+    "kor_pre": "풀",
+    "price_rank":1
+  },
+  "Um Rune": {
+    "no": 22,
+    "kor": "우움룬",
+    "prefix": "Um",
+    "kor_pre": "우움",
+    "price_rank":2
+  },
+  "Mal Rune": {
+    "no": 23,
+    "kor": "말룬",
+    "prefix": "Mal",
+    "kor_pre": "말",
+    "price_rank":3
+  },
+  "Ist Rune": {
+    "no": 24,
+    "kor": "이스트룬",
+    "prefix": "Ist",
+    "kor_pre": "이스트",
+    "price_rank":3.5
+  },
+  "Gul Rune": {
+    "no": 25,
+    "kor": "굴룬",
+    "prefix": "Gul",
+    "kor_pre": "굴",
+    "price_rank":4
+  },
+  "Vex Rune": {
+    "no": 26,
+    "kor": "벡스룬",
+    "prefix": "Vex",
+    "kor_pre": "벡스",
+    "price_rank":5
+  },
+  "Ohm Rune": {
+    "no": 27,
+    "kor": "오움룬",
+    "prefix": "Ohm",
+    "kor_pre": "오움",
+    "price_rank":6
+  },
+  "Lo Rune": {
+    "no": 28,
+    "kor": "로룬",
+    "prefix": "Lo",
+    "kor_pre": "로",
+    "price_rank":7
+  },
+  "Sur Rune": {
+    "no": 29,
+    "kor": "수르룬",
+    "prefix": "Sur",
+    "kor_pre": "수르",
+    "price_rank":8
+  },
+  "Ber Rune": {
+    "no": 30,
+    "kor": "베르룬",
+    "prefix": "Ber",
+    "kor_pre": "베르",
+    "price_rank":9
+  },
+  "Jah Rune": {
+    "no": 31,
+    "kor": "자룬",
+    "prefix": "Jah",
+    "kor_pre": "자",
+    "price_rank":10
+  },
+  "Cham Rune": {
+    "no": 32,
+    "kor": "참룬",
+    "prefix": "Cham",
+    "kor_pre": "참",
+    "price_rank":6
+  },
+  "Zod Rune": {
+    "no": 33,
+    "kor": "조드룬",
+    "prefix": "Zod",
+    "kor_pre": "조드",
+    "price_rank":7
+  }
+}

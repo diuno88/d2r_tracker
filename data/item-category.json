@@ -1,0 +1,47 @@
+{
+
+  "javelin":     { "kor": "재벌린",   "group": "weapon",      "same": "Spear" },
+  "club":        { "kor": "클럽",     "group": "weapon",      "same": "Club" },
+  "shield":      { "kor": "쉴드",     "group": "etc",         "same": "Shield" },
+  "polearm":     { "kor": "폴암",     "group": "weapon",      "same": "Polearm" },
+  "helmet":      { "kor": "헬름",     "group": "etc",         "same": "Helm" },
+  "sword":       { "kor": "소드",     "group": "weapon",      "same": "Sword" },
+  "axe":         { "kor": "액스",     "group": "weapon",      "same": "Axe" },
+  "belt":        { "kor": "벨트",     "group": "etc" },
+  "boot":        { "kor": "부츠",     "group": "etc" },
+  "h2h":         { "kor": "탤런",     "group": "weapon",      "same": "Claw" },
+  "knife":       { "kor": "나이프",   "group": "weapon",      "same": "Dagger" },
+  "glove":       { "kor": "글러브",   "group": "etc" },
+  "hammer":      { "kor": "마울",     "group": "weapon",      "same": "Hammer" },
+  "staff":       { "kor": "스태프",   "group": "weapon",      "same": "Stave" },
+  "bow":         { "kor": "보우",     "group": "weapon",      "same": "Ranged" },
+  "Crossbow":    { "kor": "크로스보우","group": "weapon",      "same": "Ranged" },
+  "voodoo_head": { "kor": "트로피",   "group": "etc",         "same": "Voodoo Head" },
+  "pelt":        { "kor": "스피리트", "group": "etc" },
+  "wand":        { "kor": "원드",     "group": "weapon",      "same": "Wand" },
+  "armor":       { "kor": "갑옷",     "group": "body armor",  "same": "Body Armor" },
+  "spear":       { "kor": "스피어",   "group": "weapon",      "same": "Spear" },
+  "scepter":     { "kor": "셉터",     "group": "weapon",      "same": "Scepter" },
+  "potion":      { "kor": "물약",     "group": "etc" },
+  "circlet":     { "kor": "써클릿",   "group": "etc" },
+  "orb":         { "kor": "오브",     "group": "weapon" },
+  "mace":        { "kor": "메이스",   "group": "weapon",      "same": "Mace" },
+  "ring":        { "kor": "반지",     "group": "etc" },
+  "amulet":      { "kor": "목걸이",   "group": "etc" },
+  "jewel":       { "kor": "주얼",     "group": "etc" },
+  "charm":       { "kor": "부적",     "group": "etc" },
+  "grimoires":   { "kor": "마법서",   "group": "etc",         "same": "Grimoire" },
+  "statue":  { "kor": "동상",  "group": "material" },
+  "essence": { "kor": "정수",  "group": "material" },
+  "key":     { "kor": "키",    "group": "material" },
+  "gold":    { "kor": "골드",  "group": "material" },
+  "shard":   { "kor": "세계석","group": "material" },
+
+  "__composite": {
+    "Weapon": ["axe", "sword", "mace", "hammer", "scepter", "staff", "polearm", "spear", "javelin", "bow", "knife", "h2h", "wand", "orb"],
+    "Melee":  ["axe", "sword", "mace", "hammer", "scepter", "staff", "polearm", "spear", "javelin", "knife", "h2h", "club"],
+    "Ranged": ["bow"],
+    "Auric":  ["shield"]
+  }
+
+}

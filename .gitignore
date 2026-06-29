@@ -1,0 +1,50 @@
+# Build output
+dist/
+build/
+*.spec
+
+# Node
+node_modules/
+node_worker/node_modules/
+
+# Node binary
+node/
+
+# OCR models (large binary files)
+models/
+
+# OCR trained data (large files)
+node_worker/eng.traineddata
+node_worker/kor.traineddata
+
+# Accidental files
+=*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Screenshots / temp images
+window_overay.png
+
+# API keys (sensitive)
+tracker_config_keys.json

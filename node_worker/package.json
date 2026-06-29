@@ -1,0 +1,12 @@
+{
+  "name": "d2r-tracker-ocr-worker",
+  "version": "1.0.0",
+  "description": "D2R Tracker OCR Worker - tesseract.js 기반 OCR 처리",
+  "main": "ocr_worker.js",
+  "scripts": {
+    "start": "node ocr_worker.js"
+  },
+  "dependencies": {
+    "tesseract.js": "^5.1.1"
+  }
+}

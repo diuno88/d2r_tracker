@@ -1,0 +1,85 @@
+[
+  {
+    "id":4152254204,
+    "name":"Large Charm",
+    "nameId":"large-charm",
+    "img":"https://cdn.nookazon.com/diablo2resurrected/charm/charm_medium.png",
+    "korName": "큰부적",
+    "description_filtered": [
+      {
+        "variant": 1770486612,
+        "img_index":"charm_medium",
+        "kor":"부적",
+        "eng":"Paper"
+      },
+      {
+        "variant": 1502741354,
+        "img_index":"charm_medium2",
+        "kor":"뿔",
+        "eng":"Horn"
+      },
+      {
+        "variant": 235865829,
+        "img_index":"charm_medium3",
+        "kor":"성",
+        "eng":"Obelisk"
+
+      }
+    ]
+  }
+  ,{
+    "id": 3779798752,
+    "name": "Grand Charm",
+    "nameId": "grand-charm",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/charm/charm_large.png",
+    "korName": "거대부적",
+    "description_filtered": [
+      {
+        "variant": 429479882,
+        "img_index":"charm_large",
+        "kor":"눈알",
+        "eng":"Eye"
+      },
+      {
+        "variant": 1316838126,
+        "img_index":"charm_large2",
+        "kor":"꽈베기",
+        "eng":"Celtic Knot"
+      },
+      {
+        "variant": 1041057052,
+        "img_index":"charm_large3",
+        "kor":"도깨비,오징어",
+        "eng":"Monster"
+
+      }
+    ]
+  },
+  {
+    "id": 3551993524,
+    "name": "Small Charm",
+    "nameId": "small-charm",
+    "img": "https://cdn.nookazon.com/diablo2resurrected/charm/charm_small.png",
+    "korName": "작은부적",
+    "description_filtered": [
+      {
+        "variant": 2119238500,
+        "img_index":"charm_small",
+        "kor":"조리퐁",
+        "eng":"football"
+      },
+      {
+        "variant": 697648126,
+        "img_index":"charm_small2",
+        "kor":"곰발",
+        "eng":"BearClaw"
+      },
+      {
+        "variant": 431842039,
+        "img_index":"charm_small3",
+        "kor":"M",
+        "eng":"coin"
+      }
+    ]
+  }
+]
