@@ -290,6 +290,7 @@ _PAD = 10   # 크롭 여백 (px)
 _TOOLTIP_X_MARGIN = 60
 
 
+
 def _bbox_to_rect(bbox) -> Optional[tuple[int, int, int, int]]:
     """PaddleOCR bbox ([[x0,y0],[x1,y0],[x1,y1],[x0,y1]]) → (x0,y0,x1,y1)"""
     try:
@@ -365,7 +366,35 @@ def find_tooltip(img: Image.Image,
             sys_candidates.append((dist, bx0, by0, bx1, by1, text))
 
         if not sys_candidates:
-            return None, None, f"툴팁감지[실패] 시스템문구 없음 mouse=({mx},{my})"
+            # 폴백: 마우스 x를 anchor로 삼아 기존 step3와 동일한 방식으로 bbox 수집
+            # y_end만 이미지 하단(ih)으로 확장 (시스템 문구가 캡쳐 밖으로 잘린 경우)
+            fix_cx = mx
+            half_w = max(150, (fix_cx - 0) // 4)
+            fall_bboxes = []
+            for text, bbox in lines_with_bbox:
+                rect = _bbox_to_rect(bbox)
+                if rect is None:
+                    continue
+                bx0, by0, bx1, by1 = rect
+                bcx = (bx0 + bx1) // 2
+                if not (fix_cx - half_w - _TOOLTIP_X_MARGIN <= bcx
+                        <= fix_cx + half_w + _TOOLTIP_X_MARGIN):
+                    continue
+                fall_bboxes.append((bx0, by0, bx1, by1))
+
+            if not fall_bboxes:
+                return None, None, f"툴팁감지[실패] 시스템문구 없음 mouse=({mx},{my})"
+
+            fx0 = min(b[0] for b in fall_bboxes)
+            fx1 = max(b[2] for b in fall_bboxes)
+            fy0 = min(b[1] for b in fall_bboxes)
+            x1 = max(0,  fx0 - _PAD)
+            x2 = min(iw, fx1 + _PAD)
+            y1 = max(0,  fy0 - _PAD)
+            y2 = ih
+            dbg = f"툴팁감지[폴백] x={x1}~{x2} y={y1}~{y2} mouse=({mx},{my})"
+            print(f"[Tooltip] {dbg}")
+            return img.crop((x1, y1, x2, y2)), (x1, y1, x2, y2), dbg
 
         sys_candidates.sort(key=lambda c: c[0])
         _, sx0, sby0, sx1, sby1, sys_text_dbg = sys_candidates[0]

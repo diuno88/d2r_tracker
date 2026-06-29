@@ -7,18 +7,18 @@
   "ladder_season": 14,
   "language": "kor",
   "option_max_offset": 5,
-  "ocr_mode": "ai",
+  "ocr_mode": "paddle",
   "overlay_position": "top",
   "overlay_bottom_offset": 1000,
   "overlay_bg_color": "#111111",
   "overlay_text_color": "#d4a843",
   "overlay_font_extra": 3,
-  "is_premium": true,
+  "is_premium": false,
   "premium_key": "",
   "fav_refresh_min": 5,
   "fav_overlay_interval_min": 10,
   "favorites": [],
-  "target_process": "D2R.exe",
+  "target_process": "Photos.exe",
   "versions": [
     "reign of the warlock"
   ]

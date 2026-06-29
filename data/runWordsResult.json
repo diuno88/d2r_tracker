@@ -1,6 +1,8 @@
 [
   {
     "id": 3908837840,
+    "runsKor": "랄오르트탈",
+    "runsEng": "RalOrtTal",
     "name": "Ancients' Pledge",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/ancients_pledge.png",
     "type": [
@@ -18,6 +20,8 @@
   },
   {
     "id": 3385933447,
+    "runsKor": "돌우움베르이스트",
+    "runsEng": "DolUmBerIst",
     "name": "Chains of Honor",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/chains_of_honor.png",
     "type": [
@@ -35,6 +39,8 @@
   },
   {
     "id": 3368308630,
+    "runsKor": "렘이스트이오",
+    "runsEng": "LemIstIo",
     "name": "Delirium",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/delerium.png",
     "type": [
@@ -52,6 +58,8 @@
   },
   {
     "id": 2218687720,
+    "runsKor": "풀랄솔",
+    "runsEng": "PulRalSol",
     "name": "Enlightenment",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/enlightenment.png",
     "type": [
@@ -69,6 +77,8 @@
   },
   {
     "id": 3490200463,
+    "runsKor": "자굴에드",
+    "runsEng": "JahGulEth",
     "name": "Fury",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/fury.png",
     "type": [
@@ -86,6 +96,8 @@
   },
   {
     "id": 2979471591,
+    "runsKor": "엠엘아아이드티르솔",
+    "runsEng": "AmnElIthTirSol",
     "name": "Honor",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/honor.png",
     "type": [
@@ -103,6 +115,8 @@
   },
   {
     "id": 3912241053,
+    "runsKor": "샤엘코엘드",
+    "runsEng": "ShaelKoEld",
     "name": "Hustle (Armor)",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/hustle.png",
     "type": [
@@ -120,6 +134,8 @@
   },
   {
     "id": 2455717479,
+    "runsKor": "헬룸팔",
+    "runsEng": "HelLumFal",
     "name": "Lionheart",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/lionheart.png",
     "type": [
@@ -137,6 +153,8 @@
   },
   {
     "id": 2209115565,
+    "runsKor": "오르트솔",
+    "runsEng": "OrtSol",
     "name": "Lore",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/lore.png",
     "type": [
@@ -154,6 +172,8 @@
   },
   {
     "id": 4074840200,
+    "runsKor": "아아이드엘에드",
+    "runsEng": "IthElEth",
     "name": "Malice",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/malice.png",
     "type": [
@@ -171,6 +191,8 @@
   },
   {
     "id": 4075954085,
+    "runsKor": "샤엘코네프",
+    "runsEng": "ShaelKoNef",
     "name": "Melody",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/melody.png",
     "type": [
@@ -198,6 +220,8 @@
   },
   {
     "id": 3824179300,
+    "runsKor": "룸이오솔에드",
+    "runsEng": "LumIoSolEth",
     "name": "Memory",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/memory.png",
     "type": [
@@ -215,6 +239,8 @@
   },
   {
     "id": 3449189353,
+    "runsKor": "헬엠네프",
+    "runsEng": "HelAmnNef",
     "name": "Myth",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/myth.png",
     "type": [
@@ -232,6 +258,8 @@
   },
   {
     "id": 3516094811,
+    "runsKor": "네프티르",
+    "runsEng": "NefTir",
     "name": "Nadir",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/nadir.png",
     "type": [
@@ -249,6 +277,8 @@
   },
   {
     "id": 2771325093,
+    "runsKor": "조드이스트렘룸이오네프",
+    "runsEng": "ZodIstLemLumIoNef",
     "name": "Obsession",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/obsession.png",
     "type": [
@@ -281,6 +311,8 @@
   },
   {
     "id": 4238703010,
+    "runsKor": "샤엘주울엠",
+    "runsEng": "ShaelThulAmn",
     "name": "Peace",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/peace.png",
     "type": [
@@ -298,6 +330,8 @@
   },
   {
     "id": 3250339330,
+    "runsKor": "네프솔아아이드",
+    "runsEng": "NefSolIth",
     "name": "Radiance",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/radiance.png",
     "type": [
@@ -315,6 +349,8 @@
   },
   {
     "id": 3104530004,
+    "runsKor": "샤엘에드",
+    "runsEng": "ShaelEth",
     "name": "Rhyme",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/rhyme.png",
     "type": [
@@ -332,6 +368,8 @@
   },
   {
     "id": 2590924062,
+    "runsKor": "돌엘드헬이스트티르벡스",
+    "runsEng": "DolEldHelIstTirVex",
     "name": "Silence",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/silence.png",
     "type": [
@@ -349,6 +387,8 @@
   },
   {
     "id": 3229615258,
+    "runsKor": "네프룸",
+    "runsEng": "NefLum",
     "name": "Smoke",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/smoke.png",
     "type": [
@@ -366,6 +406,8 @@
   },
   {
     "id": 2379502105,
+    "runsKor": "탈에드",
+    "runsEng": "TalEth",
     "name": "Stealth",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/stealth.png",
     "type": [
@@ -383,6 +425,8 @@
   },
   {
     "id": 3110603193,
+    "runsKor": "티르엘",
+    "runsEng": "TirEl",
     "name": "Steel",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/steel.png",
     "type": [
@@ -410,6 +454,8 @@
   },
   {
     "id": 4066132501,
+    "runsKor": "엠티르",
+    "runsEng": "AmnTir",
     "name": "Strength",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/strength.png",
     "type": [
@@ -427,6 +473,8 @@
   },
   {
     "id": 3765770868,
+    "runsKor": "샤엘주울렘",
+    "runsEng": "ShaelThulLem",
     "name": "Treachery",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/treachery.png",
     "type": [
@@ -444,6 +492,8 @@
   },
   {
     "id": 4059063280,
+    "runsKor": "탈돌말",
+    "runsEng": "TalDolMal",
     "name": "Venom",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/venom.png",
     "type": [
@@ -461,6 +511,8 @@
   },
   {
     "id": 3209908061,
+    "runsKor": "렘코티르",
+    "runsEng": "LemKoTir",
     "name": "Wealth",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/wealth.png",
     "type": [
@@ -478,6 +530,8 @@
   },
   {
     "id": 2941072295,
+    "runsKor": "돌이오",
+    "runsEng": "DolIo",
     "name": "White",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/white.png",
     "type": [
@@ -495,6 +549,8 @@
   },
   {
     "id": 3819728147,
+    "runsKor": "주울이오네프",
+    "runsEng": "ThulIoNef",
     "name": "Black",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/black.png",
     "type": [
@@ -530,6 +586,8 @@
   },
   {
     "id": 3193580456,
+    "runsKor": "풀아아이드엘드",
+    "runsEng": "PulIthEld",
     "name": "Wisdom",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/wisdom.png",
     "type": [
@@ -562,6 +620,8 @@
   },
   {
     "id": 2435457251,
+    "runsKor": "엘솔돌로",
+    "runsEng": "ElSolDolLo",
     "name": "Fortitude",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/fortitude.png",
     "type": [
@@ -592,6 +652,8 @@
   },
   {
     "id": 2722520352,
+    "runsKor": "코벡스풀주울",
+    "runsEng": "KoVexPulThul",
     "name": "Heart of the Oak",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/heart_of_the_oak.png",
     "type": [
@@ -622,6 +684,8 @@
   },
   {
     "id": 2773029390,
+    "runsKor": "랄굴엘드",
+    "runsEng": "RalGulEld",
     "name": "Principle",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/principle.png",
     "type": [
@@ -647,6 +711,8 @@
   },
   {
     "id": 2364875817,
+    "runsKor": "베르티르우움말룸",
+    "runsEng": "BerTirUmMalLum",
     "name": "Beast",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/beast.png",
     "type": [
@@ -689,6 +755,8 @@
   },
   {
     "id": 3016236627,
+    "runsKor": "자로말굴",
+    "runsEng": "JahLoMalGul",
     "name": "Brand",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/brand.png",
     "type": [
@@ -731,6 +799,8 @@
   },
   {
     "id": 2448974169,
+    "runsKor": "벡스헬엘엘드조드에드",
+    "runsEng": "VexHelElEldZodEth",
     "name": "Breath of the Dying",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/breath_of_the_dying.png",
     "type": [
@@ -763,6 +833,8 @@
   },
   {
     "id": 2323188615,
+    "runsKor": "엠랄말이스트오옴",
+    "runsEng": "AmnRalMalIstOhm",
     "name": "Call to Arms",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/call_to_arms.png",
     "type": [
@@ -816,6 +888,8 @@
   },
   {
     "id": 4012582858,
+    "runsKor": "팔오옴우움",
+    "runsEng": "FalOhmUm",
     "name": "Chaos",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/chaos.png",
     "type": [
@@ -848,6 +922,8 @@
   },
   {
     "id": 954013925,
+    "runsKor": "샤엘우움티르",
+    "runsEng": "ShaelUmTir",
     "name": "Crescent Moon",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/crescent_moon.png",
     "type": [
@@ -890,6 +966,8 @@
   },
   {
     "id": 3840874018,
+    "runsKor": "헬엘벡스오르트굴",
+    "runsEng": "HelElVexOrtGul",
     "name": "Death",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/death.png",
     "type": [
@@ -927,6 +1005,8 @@
   },
   {
     "id": 4194200311,
+    "runsKor": "헬오옴우움로참",
+    "runsEng": "HelOhmUmLoCham",
     "name": "Doom",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/doom.png",
     "type": [
@@ -969,6 +1049,8 @@
   },
   {
     "id": 2281267183,
+    "runsKor": "샤엘우움주울",
+    "runsEng": "ShaelUmThul",
     "name": "Duress",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/duress.png",
     "type": [
@@ -1001,6 +1083,8 @@
   },
   {
     "id": 4205149908,
+    "runsKor": "엠베르이스트솔수르",
+    "runsEng": "AmnBerIstSolSur",
     "name": "Eternity",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/eternity.png",
     "type": [
@@ -1026,6 +1110,8 @@
   },
   {
     "id": 3070973153,
+    "runsKor": "팔오옴오르트자",
+    "runsEng": "FalOhmOrtJah",
     "name": "Famine",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/famine.png",
     "type": [
@@ -1084,6 +1170,8 @@
   },
   {
     "id": 4017881382,
+    "runsKor": "수르참엠로",
+    "runsEng": "SurChamAmnLo",
     "name": "Hand of Justice",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/hand_of_justice.png",
     "type": [
@@ -1119,6 +1207,8 @@
   },
   {
     "id": 2814586303,
+    "runsKor": "티르아아이드솔코",
+    "runsEng": "TirIthSolKo",
     "name": "Harmony",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/harmony.png",
     "type": [
@@ -1182,6 +1272,8 @@
   },
   {
     "id": 3062130051,
+    "runsKor": "샤엘코엘드",
+    "runsEng": "ShaelKoEld",
     "name": "Hustle (Weapon)",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/hustle.png",
     "type": [
@@ -1207,6 +1299,8 @@
   },
   {
     "id": 2490200098,
+    "runsKor": "앰샤엘자로",
+    "runsEng": "AmnShaelJahLo",
     "name": "Ice",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/ice.png",
     "type": [
@@ -1249,6 +1343,8 @@
   },
   {
     "id": 4155198360,
+    "runsKor": "베르말베르이스트",
+    "runsEng": "BerMalBerIst",
     "name": "Infinity",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/infinity.png",
     "type": [
@@ -1291,6 +1387,8 @@
   },
   {
     "id": 3753597518,
+    "runsKor": "말우움굴팔",
+    "runsEng": "MalUmGulFal",
     "name": "Kingslayer",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/kingslayer.png",
     "type": [
@@ -1321,6 +1419,8 @@
   },
   {
     "id": 3400546348,
+    "runsKor": "자말자수르자베르",
+    "runsEng": "JahMalJahSurJahBer",
     "name": "Last Wish",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/last_wish.png",
     "type": [
@@ -1363,6 +1463,8 @@
   },
   {
     "id": 3813699743,
+    "runsKor": "말굴앰",
+    "runsEng": "MalGulAmn",
     "name": "Mosaic",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/mosaic.png",
     "type": [
@@ -1409,6 +1511,8 @@
   },
   {
     "id": 3343671684,
+    "runsKor": "샤엘풀말룸",
+    "runsEng": "ShaelPulMalLum",
     "name": "Oath",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/oath.png",
     "type": [
@@ -1451,6 +1555,8 @@
   },
   {
     "id": 3436543478,
+    "runsKor": "돌오르트엘드렘",
+    "runsEng": "DolOrtEldLem",
     "name": "Passion",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/passion.png",
     "type": [
@@ -1490,6 +1596,8 @@
   },
   {
     "id": 2197492014,
+    "runsKor": "수르엘",
+    "runsEng": "SurEl",
     "name": "Wind",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/wind.png",
     "type": [
@@ -1515,6 +1623,8 @@
   },
   {
     "id": 3276298517,
+    "runsKor": "샤엘이오탈",
+    "runsEng": "ShaelIoTal",
     "name": "Cure",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/cure.png",
     "type": [
@@ -1547,6 +1657,8 @@
   },
   {
     "id": 4285012121,
+    "runsKor": "팔우움풀",
+    "runsEng": "FalUmPul",
     "name": "Gloom",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/gloom.png",
     "type": [
@@ -1572,6 +1684,8 @@
   },
   {
     "id": 3782113433,
+    "runsKor": "샤엘이오오르트",
+    "runsEng": "ShaelIoOrt",
     "name": "Ground",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/ground.png",
     "type": [
@@ -1611,6 +1725,8 @@
   },
   {
     "id": 2461085789,
+    "runsKor": "샤엘이오주울",
+    "runsEng": "ShaelIoThul",
     "name": "Hearth",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/hearth.png",
     "type": [
@@ -1650,6 +1766,8 @@
   },
   {
     "id": 3829221492,
+    "runsKor": "이오참팔",
+    "runsEng": "IoChamFal",
     "name": "Metamorphosis",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/metamorphosis.png",
     "type": [
@@ -1675,6 +1793,8 @@
   },
   {
     "id": 3178447042,
+    "runsKor": "말티르",
+    "runsEng": "MalTir",
     "name": "Prudence",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/prudence.png",
     "type": [
@@ -1707,6 +1827,8 @@
   },
   {
     "id": 2856481773,
+    "runsKor": "코코말",
+    "runsEng": "KoKoMal",
     "name": "Sanctuary",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/sanctuary.png",
     "type": [
@@ -1739,6 +1861,8 @@
   },
   {
     "id": 3550826842,
+    "runsKor": "에드룸",
+    "runsEng": "EthLum",
     "name": "Splendor",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/splendor.png",
     "type": [
@@ -1764,6 +1888,8 @@
   },
   {
     "id": 2781950288,
+    "runsKor": "샤엘우움풀룸",
+    "runsEng": "ShaelUmPulLum",
     "name": "Stone",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/stone.png",
     "type": [
@@ -1789,6 +1915,8 @@
   },
   {
     "id": 2495623478,
+    "runsKor": "샤엘이오랄",
+    "runsEng": "ShaelIoRal",
     "name": "Temper",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/temper.png",
     "type": [
@@ -1828,6 +1956,8 @@
   },
   {
     "id": 3733854279,
+    "runsKor": "티르탈앰",
+    "runsEng": "TirTalAmn",
     "name": "Edge",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/edge.png",
     "type": [
@@ -1860,6 +1990,8 @@
   },
   {
     "id": 3352234063,
+    "runsKor": "렘코엘엘드",
+    "runsEng": "LemKoElEld",
     "name": "Voice of Reason",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/voice_of_reason.png",
     "type": [
@@ -1904,6 +2036,8 @@
   },
   {
     "id": 3767021069,
+    "runsKor": "랄오옴수르에드",
+    "runsEng": "RalOhmSurEth",
     "name": "Bramble",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/bramble.png",
     "type": [
@@ -1936,6 +2070,8 @@
   },
   {
     "id": 3001704624,
+    "runsKor": "오옴자렘엘드",
+    "runsEng": "OhmJahLemEld",
     "name": "Faith",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/faith.png",
     "type": [
@@ -1978,6 +2114,8 @@
   },
   {
     "id": 2542550690,
+    "runsKor": "랄티르탈솔",
+    "runsEng": "RalTirTalSol",
     "name": "Insight",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/insight.png",
     "type": [
@@ -2041,6 +2179,8 @@
   },
   {
     "id": 3927927332,
+    "runsKor": "앰렘코",
+    "runsEng": "AmnLemKo",
     "name": "Lawbringer",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/lawbringer.png",
     "type": [
@@ -2097,6 +2237,8 @@
   },
   {
     "id": 4124397285,
+    "runsKor": "벡스벡스로자",
+    "runsEng": "VexVexLoJah",
     "name": "Phoenix",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/phoenix.png",
     "type": [
@@ -2148,6 +2290,8 @@
   },
   {
     "id": 3259904432,
+    "runsKor": "네프풀벡스",
+    "runsEng": "NefPulVex",
     "name": "Flickering Flame",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/flickering_flame.png",
     "type": [
@@ -2194,6 +2338,8 @@
   },
   {
     "id": 3509804989,
+    "runsKor": "벡스오옴이스트돌",
+    "runsEng": "VexOhmIstDol",
     "name": "Exile",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/exile.png",
     "type": [
@@ -2226,6 +2372,8 @@
   },
   {
     "id": 2213836276,
+    "runsKor": "참샤엘우움",
+    "runsEng": "ChamShaelUm",
     "name": "Plague",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/plague.png",
     "type": [
@@ -2270,6 +2418,8 @@
   },
   {
     "id": 2501313411,
+    "runsKor": "참샤엘굴주울아이드",
+    "runsEng": "ChamShaelGulThulIth",
     "name": "Mist",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/mist.png",
     "type": [
@@ -2319,6 +2469,8 @@
   },
   {
     "id": 3854262021,
+    "runsKor": "참수르이오로",
+    "runsEng": "ChamSurIoLo",
     "name": "Pride",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/pride.png",
     "type": [
@@ -2361,6 +2513,8 @@
   },
   {
     "id": 2513849782,
+    "runsKor": "솔우움우움",
+    "runsEng": "SolUmUm",
     "name": "Bone",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/bone.png",
     "type": [
@@ -2386,6 +2540,8 @@
   },
   {
     "id": 3558345749,
+    "runsKor": "오르트말아이드",
+    "runsEng": "OrtMalIth",
     "name": "Rain",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/rain.png",
     "type": [
@@ -2411,6 +2567,8 @@
   },
   {
     "id": 2499094534,
+    "runsKor": "벡스로베르자코",
+    "runsEng": "VexLoBerJahKo",
     "name": "Destruction",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/destruction.png",
     "type": [
@@ -2441,6 +2599,8 @@
   },
   {
     "id": 3604494325,
+    "runsKor": "헬코렘굴",
+    "runsEng": "HelKoLemGul",
     "name": "Rift",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/rift.png",
     "type": [
@@ -2485,6 +2645,8 @@
   },
   {
     "id": 3342294954,
+    "runsKor": "수르로솔",
+    "runsEng": "SurLoSol",
     "name": "Dragon",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/dragon.png",
     "type": [
@@ -2515,6 +2677,8 @@
   },
   {
     "id": 3673698610,
+    "runsKor": "자아이드베르",
+    "runsEng": "JahIthBer",
     "name": "Enigma",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/enigma.png",
     "type": [
@@ -2540,6 +2704,8 @@
   },
   {
     "id": 2241024865,
+    "runsKor": "헬코주울에드팔",
+    "runsEng": "HelKoThulEthFal",
     "name": "Obedience",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/obedience.png",
     "type": [
@@ -2582,6 +2748,8 @@
   },
   {
     "id": 2680357188,
+    "runsKor": "오르트에드",
+    "runsEng": "OrtEth",
     "name": "Zephyr",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/zephyr.png",
     "type": [
@@ -2612,6 +2780,8 @@
   },
   {
     "id": 3588456322,
+    "runsKor": "탈주울오르트앰",
+    "runsEng": "TalThulOrtAmn",
     "name": "Spirit",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/spirit.png",
     "type": [
@@ -2670,6 +2840,8 @@
   },
   {
     "id": 4098185100,
+    "runsKor": "이오자풀",
+    "runsEng": "IoJahPul",
     "name": "Dream",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/dream.png",
     "type": [
@@ -2721,6 +2893,8 @@
   },
   {
     "id": 2788445821,
+    "runsKor": "풀룸베르말",
+    "runsEng": "PulLumBerMal",
     "name": "Wrath",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/wrath.png",
     "type": [
@@ -2765,6 +2939,8 @@
   },
   {
     "id": 2438922385,
+    "runsKor": "샤엘이오솔",
+    "runsEng": "ShaelIoSol",
     "name": "Bulwark",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/bulwark.png",
     "type": [
@@ -2804,6 +2980,8 @@
   },
   {
     "id": 3067108730,
+    "runsKor": "에드티르로말랄",
+    "runsEng": "EthTirLoMalRal",
     "name": "Grief",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/grief.png",
     "type": [
@@ -2862,6 +3040,8 @@
   },
   {
     "id": 3530636421,
+    "runsKor": "팔이오아이드엘드엘헬",
+    "runsEng": "FalIoIthEldElHel",
     "name": "Unbending Will",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/unbending_will.png",
     "type": [
@@ -2901,6 +3081,8 @@
   },
   {
     "id": 3239662578,
+    "runsKor": "에드랄오르트탈",
+    "runsEng": "EthRalOrtTal",
     "name": "Holy Thunder",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/holy_thunder.png",
     "type": [
@@ -2933,6 +3115,8 @@
   },
   {
     "id": 2713453202,
+    "runsKor": "앰랄주울",
+    "runsEng": "AmnRalThul",
     "name": "King's Grace",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/kings_grace.png",
     "type": [
@@ -2963,6 +3147,8 @@
   },
   {
     "id": 2214159910,
+    "runsKor": "티르랄",
+    "runsEng": "TirRal",
     "name": "Leaf",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/leaf.png",
     "type": [
@@ -2988,6 +3174,8 @@
   },
   {
     "id": "2807122517",
+    "runsKor": "헬샤엘랄",
+    "runsEng": "HelShaelRal",
     "name": "Authority",
     "nameId": "authority",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runewords/735cd4bbc4d567ef1ce39286c6275a44.jpeg",
@@ -3008,13 +3196,14 @@
         "property_id": 510,
         "property_kor": "피해 증가"
       }
-
     ],
     "korName": "권위",
     "baseItemKey": "Base Item (Body Armor) 3"
   },
   {
     "id": "3408989058",
+    "runsKor": "이스트랄이오",
+    "runsEng": "IstRalIo",
     "name": "Coven",
     "nameId": "coven",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runewords/806409b8b40c3ebad6c1edac2cadabf7.jpeg",
@@ -3055,6 +3244,8 @@
   },
   {
     "id": "3908860136",
+    "runsKor": "앰샤엘오옴",
+    "runsEng": "AmnShaelOhm",
     "name": "Ritual",
     "nameId": "ritual",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runewords/cf85d182d4138d957e77af6a10d8d53b.jpeg",
@@ -3102,6 +3293,8 @@
   },
   {
     "id": "3390983223",
+    "runsKor": "돌굴",
+    "runsEng": "DolGul",
     "name": "Vigilance",
     "nameId": "vigilance",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runewords/b9cfe5af1bd9b0d352369a15b6c0954d.jpeg",
@@ -3166,6 +3359,8 @@
   },
   {
     "id": "3291499016",
+    "runsKor": "주울조드이스트",
+    "runsEng": "ThulZodIst",
     "name": "Void",
     "nameId": "void",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runewords/830e92f25e2af93b53f15ab02fea01ff.jpeg",
@@ -3179,7 +3374,6 @@
       }
     ],
     "description_filtered": [
-
       {
         "min": 10,
         "max": 15,
@@ -3207,6 +3401,8 @@
   },
   {
     "id": "4086849218",
+    "runsKor": "탈오르트주울",
+    "runsEng": "TalOrtThul",
     "name": "Pattern",
     "nameId": "pattern",
     "img": "https://cdn.nookazon.com/diablo2resurrected/runeword/pattern.png",
@@ -3247,8 +3443,4 @@
     "korName": "귀감",
     "baseItemKey": "Base Item (Claw) 3"
   }
-
-
-
-  
 ]

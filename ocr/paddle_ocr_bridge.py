@@ -9,6 +9,7 @@ _PADDLE_PACKAGES = [
     "paddlepaddle==2.6.2",
     "imgaug",
     "paddleocr==2.7.3",
+    "python-docx",
 ]
 
 
@@ -21,6 +22,13 @@ def _ensure_paddle_installed(notify_fn=None) -> bool:
         pass
 
     import sys, subprocess, site
+
+    # frozen exe(PyInstaller)에서는 sys.executable이 앱 자체이므로 pip 실행 불가
+    if getattr(sys, 'frozen', False):
+        if notify_fn:
+            notify_fn("PaddleOCR 로드 실패 — 재설치 후 다시 시도하세요.")
+        return False
+
     if notify_fn:
         notify_fn("PaddleOCR 패키지 설치 중... (최초 1회, 수 분 소요)")
     try:
