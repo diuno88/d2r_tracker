@@ -7,17 +7,220 @@
   "ladder_season": 14,
   "language": "kor",
   "option_max_offset": 5,
-  "ocr_mode": "paddle",
+  "ocr_mode": "ai",
   "overlay_position": "top",
-  "overlay_bottom_offset": 1000,
+  "overlay_bottom_offset": 800,
   "overlay_bg_color": "#111111",
   "overlay_text_color": "#d4a843",
-  "overlay_font_extra": 3,
-  "is_premium": false,
-  "premium_key": "",
+  "overlay_font_extra": 7,
+  "is_premium": true,
+  "premium_key": "admion1234!@#$",
   "fav_refresh_min": 5,
   "fav_overlay_interval_min": 10,
-  "favorites": [],
+  "favorites": [
+    {
+      "name": "지옥불횃불",
+      "url": "https://traderie.com/diablo2resurrected/product/hellfire-torch?prop_Ladder=true&prop_Mode=softcore&prop_Game%20version=reign%20of%20the%20warlock&prop_1862Min=3&prop_1862Max=3&prop_727Min=19&prop_727Max=20&prop_441Min=18&prop_441Max=20",
+      "api_url": "https://traderie.com/api/diablo2resurrected/listings?item=3475729354&prop_Ladder=true&prop_Mode=softcore&prop_Game%20version=reign%20of%20the%20warlock&prop_1862Min=3&prop_1862Max=3&prop_727Min=19&prop_727Max=20&prop_441Min=18&prop_441Max=20",
+      "min_price": "Zod",
+      "max_price": "Jah x15",
+      "options": {
+        "악마술사 기술 레벨": "3",
+        "모든능력치": "19~20",
+        "모든저항": "18~20"
+      },
+      "options_editable": [
+        {
+          "key": 498,
+          "min": 3,
+          "max": 3,
+          "name": "강령술사 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": false
+        },
+        {
+          "key": 488,
+          "min": 3,
+          "max": 3,
+          "name": "드루이드 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": false
+        },
+        {
+          "key": 442,
+          "min": 3,
+          "max": 3,
+          "name": "성기사 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": false
+        },
+        {
+          "key": 453,
+          "min": 3,
+          "max": 3,
+          "name": "아마존 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": false
+        },
+        {
+          "key": 519,
+          "min": 3,
+          "max": 3,
+          "name": "암살자 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": false
+        },
+        {
+          "key": 403,
+          "min": 3,
+          "max": 3,
+          "name": "야만용사 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": false
+        },
+        {
+          "key": 514,
+          "min": 3,
+          "max": 3,
+          "name": "원소술사 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": false
+        },
+        {
+          "key": 1862,
+          "min": 3,
+          "max": 3,
+          "name": "악마술사 기술 레벨",
+          "db_min": 3,
+          "db_max": 3,
+          "selectable": true,
+          "included": true
+        },
+        {
+          "key": 727,
+          "min": 19,
+          "max": 20,
+          "name": "모든능력치",
+          "db_min": 10,
+          "db_max": 20,
+          "selectable": false,
+          "included": true
+        },
+        {
+          "key": 441,
+          "min": 18,
+          "max": 20,
+          "name": "모든저항",
+          "db_min": 10,
+          "db_max": 20,
+          "selectable": false,
+          "included": true
+        }
+      ],
+      "url_ctx": {
+        "name_id": "hellfire-torch",
+        "item_key": "3475729354",
+        "ladder": "Ladder",
+        "mode": "Softcore",
+        "versions": [
+          "reign of the warlock"
+        ],
+        "ethereal": false,
+        "rarity": "unique"
+      },
+      "slot": ""
+    },
+    {
+      "name": "거대부적 (눈알)",
+      "url": "https://traderie.com/diablo2resurrected/product/grand-charm?prop_Ladder=true&prop_Mode=softcore&prop_1547Min=1&prop_1547Max=1&prop_418Min=30&prop_418Max=35&variant=429479882",
+      "api_url": "https://traderie.com/api/diablo2resurrected/listings?item=3779798752&prop_Ladder=true&prop_Mode=softcore&prop_1547Min=1&prop_1547Max=1&prop_418Min=30&prop_418Max=35&variant=429479882",
+      "min_price": "Lo",
+      "max_price": "Jah x2",
+      "options": {},
+      "options_editable": [
+        {
+          "name": "기괴 기술 + (악마술사 전용)",
+          "key": 1547,
+          "db_min": 1,
+          "db_max": 1,
+          "min": 1,
+          "max": 1,
+          "selectable": false,
+          "included": true
+        },
+        {
+          "name": "생명력",
+          "key": 418,
+          "db_min": 30,
+          "db_max": 35,
+          "min": 30,
+          "max": 35,
+          "selectable": false,
+          "included": true
+        }
+      ],
+      "url_ctx": {},
+      "slot": ""
+    },
+    {
+      "name": "작은부적",
+      "url": "https://traderie.com/diablo2resurrected/product/small-charm?prop_Ladder=true&prop_Mode=softcore&prop_Game%20version=reign%20of%20the%20warlock&prop_480Min=3&prop_480Max=3&prop_401Min=11&prop_401Max=11",
+      "api_url": "https://traderie.com/api/diablo2resurrected/listings?item=3551993524&prop_Ladder=true&prop_Mode=softcore&prop_Game%20version=reign%20of%20the%20warlock&prop_480Min=3&prop_480Max=3&prop_401Min=11&prop_401Max=11",
+      "min_price": "Ist",
+      "max_price": "Ist",
+      "options": {
+        "달리기/걷기 속도": "3",
+        "독 저항": "11",
+        "최고가 Jah x2": "2"
+      },
+      "options_editable": [
+        {
+          "key": 480,
+          "min": 3,
+          "max": 3,
+          "name": "달리기/걷기 속도 %",
+          "db_min": 3,
+          "db_max": 3,
+          "included": true
+        },
+        {
+          "key": 401,
+          "min": 11,
+          "max": 11,
+          "name": "독저항",
+          "db_min": 10,
+          "db_max": 11,
+          "included": true
+        }
+      ],
+      "url_ctx": {
+        "name_id": "small-charm",
+        "item_key": 3551993524,
+        "ladder": "Ladder",
+        "mode": "Softcore",
+        "versions": [
+          "reign of the warlock"
+        ],
+        "ethereal": false,
+        "rarity": "charm"
+      },
+      "slot": "charm"
+    }
+  ],
   "target_process": "Photos.exe",
   "versions": [
     "reign of the warlock"

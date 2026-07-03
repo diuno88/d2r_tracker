@@ -190,6 +190,7 @@ class ItemParser:
         elif rarity in ('magic', 'charm') and ocr_options:
             # A경로: 어픽스 DB 매칭
             affixes = self._matcher.find_magic_affixes(header_lines, item_info)
+            option_keys = []
             if affixes:
                 option_keys = self._matcher.build_option_keys_from_affixes(
                     affixes, item_info, ocr_options, max_offset)
@@ -202,6 +203,15 @@ class ItemParser:
                     builder.set_options(option_keys)
             # charm은 A경로 실패 시 B경로 미실행 — 어픽스 미특정 상태에서 전체 옵션 적용은 과검색 유발
             options_display = self._build_options_display(ocr_options)
+            if option_keys:
+                # 즐겨찾기 편집 UI에서 min/max 조정 후 URL 재생성이 가능하도록 저장
+                # (없으면 옵션 수정이 표시 텍스트만 바뀌고 링크에는 반영되지 않음)
+                options_editable = option_keys
+                url_ctx = {
+                    'name_id': name_id, 'item_key': item_key,
+                    'ladder': ladder, 'mode': mode, 'versions': versions,
+                    'ethereal': ethereal, 'rarity': rarity,
+                }
         elif rarity == 'rare' and ocr_options:
             option_keys = self._matcher.find_option_keys(ocr_options, max_offset=max_offset)
             if option_keys:
@@ -258,6 +268,9 @@ class ItemParser:
         if versions:
             builder.set_game_version(','.join(versions))
         builder.set_rarity(url_ctx.get('rarity', '').capitalize())
+        extra_params = url_ctx.get('extra_params')
+        if extra_params:
+            builder.params.update(extra_params)
 
         active_options = [o for o in options_editable if o.get('included', True)]
         if active_options:

@@ -1321,7 +1321,7 @@ class TrackerApp:
                      padx=12, pady=(10, 6))
 
         ALL_PROVIDERS = {
-            "gemini": "Gemini 2.0 Flash",
+            "gemini": "Gemini 2.5 Flash",
             "groq":   "Groq (Llama 4)",
         }
 
@@ -2498,6 +2498,28 @@ class TrackerApp:
                 daemon=True,
             ).start()
 
+    def _run_paddle_crop_ocr(self, ocr_img) -> dict:
+        """크롭된 툴팁 이미지를 PaddleOCR(2x)로 분석 → ai_bridge.run_ocr()과 동일한 반환 형식"""
+        tmp_crop_path = save_temp_image(ocr_img)
+        try:
+            crop_ocr = self.paddle_bridge.run_ocr(tmp_crop_path, scale=2.0)
+        finally:
+            try:
+                os.unlink(tmp_crop_path)
+            except Exception:
+                pass
+        lines = crop_ocr.get("lines", [])
+        result = {
+            "success": bool(lines),
+            "lines": lines,
+            "rawText": "\n".join(lines),
+            "linesWithBbox": crop_ocr.get("linesWithBbox", []),
+            "provider": "paddle",
+        }
+        if not lines:
+            result["error"] = "툴팁 내 텍스트 없음"
+        return result
+
     def _run_pipeline_thread(self, img, region, mouse_pos, from_file: bool = False):
         """OCR → 툴팁감지 → 파싱 → 가격 → 결과 (공통 파이프라인)"""
         try:
@@ -2581,25 +2603,7 @@ class TrackerApp:
 
             if ocr_mode == "paddle":
                 self.root.after(0, lambda: self._set_status("PaddleOCR 툴팁 분석 중 (2x)..."))
-                tmp_crop_path = save_temp_image(ocr_img)
-                try:
-                    crop_ocr = self.paddle_bridge.run_ocr(tmp_crop_path, scale=2.0)
-                finally:
-                    try:
-                        os.unlink(tmp_crop_path)
-                    except Exception:
-                        pass
-                lines = crop_ocr.get("lines", [])
-                lines_with_bbox_crop = crop_ocr.get("linesWithBbox", [])
-                ocr_result = {
-                    "success": bool(lines),
-                    "lines": lines,
-                    "rawText": "\n".join(lines),
-                    "linesWithBbox": lines_with_bbox_crop,
-                    "provider": "paddle",
-                }
-                if not lines:
-                    ocr_result["error"] = "툴팁 내 텍스트 없음"
+                ocr_result = self._run_paddle_crop_ocr(ocr_img)
             else:
                 self.root.after(0, lambda: self._set_status(
                     f"AI 분석 중 ({self.ai_bridge.current_provider_name})..."))
@@ -2611,6 +2615,14 @@ class TrackerApp:
                         os.unlink(tmp_path)
                     except Exception:
                         pass
+
+                # 설정된 AI가 전부 할당량 소진(provider='none') → PaddleOCR로 자동 폴백
+                if not ocr_result.get("success") and ocr_result.get("provider") == "none" \
+                        and self.paddle_bridge.is_ready():
+                    self.root.after(0, lambda: self._append_log(
+                        "AI 할당량 모두 소진 → PaddleOCR(로컬)로 전환", "warn"))
+                    self.root.after(0, lambda: self._set_status("PaddleOCR 툴팁 분석 중 (2x)..."))
+                    ocr_result = self._run_paddle_crop_ocr(ocr_img)
 
             if not ocr_result.get("success"):
                 err = ocr_result.get("error", "OCR 실패")
@@ -2686,6 +2698,11 @@ class TrackerApp:
             options_editable = parse_result.get("options_editable", [])
             url_ctx = parse_result.get("url_ctx", {})
             slot = parse_result.get("slot", "")
+
+            if parse_result.get("rarity") in ("magic", "charm") and parsed_options and not options_editable:
+                self.root.after(0, lambda: self._append_log(
+                    "옵션 매칭 실패: 화면에 표시된 옵션이 링크(URL)에는 반영되지 않았습니다 "
+                    "(아이템 이름/어픽스 인식 오류로 추정)", "warn"))
             self.root.after(0, lambda _opts=parsed_options, _oe=options_editable,
                             _ctx=url_ctx, _sl=slot:
                             self._add_scan_result(

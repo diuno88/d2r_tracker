@@ -14,7 +14,7 @@ from config import load_ai_keys, load_config, save_config, save_ai_keys, \
     AI_MODEL_GEMINI, AI_MODEL_GROQ, DEFAULT_PROVIDER_ORDER
 
 PROVIDER_NAMES = {
-    'gemini': 'Gemini 2.0 Flash',
+    'gemini': 'Gemini 2.5 Flash',
     'groq':   'Groq (Llama 4)',
 }
 
@@ -35,6 +35,11 @@ class QuotaExceededError(Exception):
         self.provider = provider
         self.detail = detail
         super().__init__(f'{provider} 할당량 초과')
+
+
+class ProviderUnavailableError(QuotaExceededError):
+    """일시적 서버 과부하/장애 (503 UNAVAILABLE 등) — 할당량 초과와 동일하게 폴백 처리"""
+    pass
 
 
 class AIVisionBridge:
@@ -135,7 +140,8 @@ class AIVisionBridge:
 
             except QuotaExceededError as qe:
                 detail = f': {qe.detail[:120]}' if qe.detail else ''
-                msg = f'{PROVIDER_NAMES[provider]} 할당량 초과 → 다음 제공자로 전환{detail}'
+                reason = '일시적 서버 과부하' if isinstance(qe, ProviderUnavailableError) else '할당량 초과'
+                msg = f'{PROVIDER_NAMES[provider]} {reason} → 다음 제공자로 전환{detail}'
                 self._log(msg)
                 self._notify_status(msg)
                 self._exhausted.add(provider)
@@ -320,6 +326,9 @@ class AIVisionBridge:
             err_str = str(e).lower()
             if '429' in err_str or 'quota' in err_str or 'resource exhausted' in err_str:
                 raise QuotaExceededError('gemini', str(e))
+            if ('503' in err_str or 'unavailable' in err_str or 'overloaded' in err_str
+                    or 'high demand' in err_str):
+                raise ProviderUnavailableError('gemini', str(e))
             raise
 
     # ──────────────────────────────────────────

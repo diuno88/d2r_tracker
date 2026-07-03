@@ -87,8 +87,14 @@ _CTG_TO_AFFIX_KEYS: Dict[str, List[str]] = {
 _WEAPON_CTGS = {
     'sword', 'axe', 'mace', 'hammer', 'club', 'scepter',
     'staff', 'wand', 'orb', 'bow', 'javelin', 'spear',
-    'polearm', 'knife', 'Claw', 'h2h', 'pelt', 'voodoo_head',
+    'polearm', 'knife', 'claw', 'h2h', 'pelt', 'voodoo_head',
 }
+
+# d2r_affixes_detailed.json에 해당 슬롯 전용 prefix/suffix 데이터가 없는 ctg.
+# 매칭 후보를 못 찾을 때 전체 카테고리를 섞어 쓰면 엉뚱한(다른 슬롯) 어픽스와
+# 오매칭될 수 있으므로, 이 슬롯들은 A경로(어픽스 DB 매칭)를 포기하고
+# B경로(OCR 옵션 직접 매칭)로 넘어가도록 빈 목록을 반환한다.
+_CTG_NO_AFFIX_DATA = {'ring', 'belt', 'shield', 'armor'}
 
 
 class ItemMatcher:
@@ -725,7 +731,7 @@ class ItemMatcher:
         OCR 옵션 목록 → Traderie option key 목록
         options: [{'name': str, 'min': int, 'max': int}, ...]
         max_offset: max = min + offset (DB max 없으므로 그대로 적용)
-        반환:    [{'key': int, 'min': int, 'max': int}, ...]
+        반환:    [{'key': int, 'min': int, 'max': int, 'name': str, 'included': bool}, ...]
         """
         result = []
         for opt in options:
@@ -738,6 +744,8 @@ class ItemMatcher:
                     'key': matched['id'],
                     'min': ocr_val,
                     'max': computed_max,
+                    'name': name,
+                    'included': True,
                 })
         return result
 
@@ -983,6 +991,9 @@ class ItemMatcher:
                 return ['helmet_circlet_prefixes', 'helmet_circlet_suffixes']
             return ['helmet_prefixes', 'helmet_suffixes']
 
+        if ctg in _CTG_NO_AFFIX_DATA:
+            return []
+
         if ctg in _CTG_TO_AFFIX_KEYS:
             return list(_CTG_TO_AFFIX_KEYS[ctg])
 
@@ -1014,12 +1025,22 @@ class ItemMatcher:
 
         base_kor = self._normalize(base_item.get('korName', ''))
 
+        # 아이템명 줄 탐색: 한글이 없거나(파일명/시스템 문구 등) 보관함 UI 문구인 줄은
+        # 건너뛴다. 앞쪽 3줄로 제한하지 않는 이유: OCR/AI가 파일명·UI 잡음을
+        # 여러 줄 앞세우는 경우가 있어(예: "sample8.png", "보관함", "공유", "공유")
+        # 실제 이름 줄이 4번째 줄 이후에 오는 경우도 존재하기 때문.
+        _NOISE_LINES = {'보관함', '공유', '개인', '공개'}
         raw_line = ''
-        for ln in header_lines[:3]:
+        for ln in header_lines:
             stripped = ln.strip()
-            if stripped and len(stripped) >= 2:
-                raw_line = stripped
-                break
+            if len(stripped) < 2:
+                continue
+            if stripped in _NOISE_LINES:
+                continue
+            if not re.search(r'[가-힣]', stripped):
+                continue
+            raw_line = stripped
+            break
         if not raw_line:
             return []
 
@@ -1067,7 +1088,9 @@ class ItemMatcher:
         Affix effects → Traderie option key 목록.
         - maxSockets clamp (홈/socket)
         - OCR 실제값으로 범위 내 오버라이드
-        반환: [{'key': int, 'min': int, 'max': int}, ...]
+        반환: [{'key': int, 'min': int, 'max': int, 'name': str,
+               'db_min': int, 'db_max': int, 'included': bool}, ...]
+        (name/db_min/db_max/included: 즐겨찾기 편집 UI에서 옵션 재적용·URL 재생성에 사용)
         """
         if not affixes:
             return []
@@ -1103,7 +1126,8 @@ class ItemMatcher:
                             print(f'[ItemMatcher] 어픽스 OCR값 적용: "{desc}" → {ocr_val}')
 
                 computed_max = min(actual_min + max_offset, eff_max) if max_offset else actual_min
-                result.append({'key': matched_opt['id'], 'min': actual_min, 'max': computed_max})
+                result.append({'key': matched_opt['id'], 'min': actual_min, 'max': computed_max,
+                               'name': desc, 'db_min': eff_min, 'db_max': eff_max, 'included': True})
                 print(f'[ItemMatcher] 어픽스→옵션 key={matched_opt["id"]} "{desc}" {actual_min}~{computed_max}')
 
         return result

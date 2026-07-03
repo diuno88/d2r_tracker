@@ -40,7 +40,7 @@ class PriceSearchTab:
     """
     시세찾기 탭 컴포넌트.
 
-    toggle_fav_cb(name, url, api_url, min_price, max_price, options_editable)
+    toggle_fav_cb(name, url, api_url, min_price, max_price, options_editable, url_ctx=None)
         → True: 추가됨, False: 제거됨
     is_in_fav_cb(url) → bool
     get_ladder_cb() → "Ladder" | "Non Ladder" | ...
@@ -69,6 +69,9 @@ class PriceSearchTab:
 
         # 아이템 체크박스 vars: id → {"var": BooleanVar, "item": dict}
         self._item_vars: dict = {}
+        # 부적 체크박스 vars: id → {"var": BooleanVar, "item": dict,
+        #                          "variant_vars": {variant_id: (BooleanVar, variant_dict)}}
+        self._charm_vars: dict = {}
         # 속성 행: [{"prop_id", "check_var", "min_var", "max_var"}]
         self._desc_rows: list[dict] = []
 
@@ -79,6 +82,7 @@ class PriceSearchTab:
         # ── 데이터 ──────────────────────────────────────────────
         self._cats:    dict       = {}
         self._bases:   list[dict] = []
+        self._charms:  list[dict] = []
         self._uniques: list[dict] = []
         self._sets:    list[dict] = []
         self._rwords:  list[dict] = []
@@ -97,6 +101,7 @@ class PriceSearchTab:
         try:
             self._cats  = _load("item-category.json")
             self._bases = _load("baseItemList.json")
+            self._charms = _load("charm.json")
             raw = _load("uniqueResult.json")
             self._uniques = [x for x in raw if x.get("korName","").strip()]
             raw = _load("setItemList.json")
@@ -214,6 +219,7 @@ class PriceSearchTab:
         for w in self._ctrl.winfo_children():
             w.destroy()
         self._item_vars.clear()
+        self._charm_vars.clear()
         self._desc_rows.clear()
 
         rarity = self._rarity_var.get()
@@ -286,6 +292,8 @@ class PriceSearchTab:
 
         def _on_based_search(*_):
             ctg = getattr(self, "_selected_ctg", None)
+            if ctg == "charm":
+                return  # 부적은 3종뿐이라 검색 필터 미적용
             if ctg:
                 self._render_item_table(ctg)
 
@@ -295,7 +303,10 @@ class PriceSearchTab:
         kor = self._ctg_var.get()
         self._selected_ctg = self._ctg_kor_map.get(kor)
         self._item_vars.clear()
-        if self._selected_ctg:
+        self._charm_vars.clear()
+        if self._selected_ctg == "charm":
+            self._render_charm_table()
+        elif self._selected_ctg:
             self._render_item_table(self._selected_ctg)
 
     def _render_item_table(self, ctg_key: str):
@@ -388,6 +399,42 @@ class PriceSearchTab:
                     _mk_check(inner, variable=var,
                               text=item.get("korName", item.get("name",""))
                               ).grid(row=r, column=col, sticky="w", padx=4, pady=1)
+
+    def _render_charm_table(self):
+        """
+        부적 전용 베이스 선택 UI.
+        작은부적/큰부적/거대부적 3종 + 종류별 모양(variant) 하위 체크박스.
+        모양을 하나도 선택 안 하면 부적 id로만 검색, 선택하면 모양별 개별 검색.
+        """
+        for w in self._item_tbl_frame.winfo_children():
+            w.destroy()
+        self._charm_vars.clear()
+
+        if not self._charms:
+            ttk.Label(self._item_tbl_frame, text="부적 데이터가 없습니다.",
+                      foreground=FG2, font=("맑은 고딕", 9)).pack(anchor="w")
+            return
+
+        for charm in sorted(self._charms, key=lambda x: x.get("korName", "")):
+            cid = charm["id"]
+            var = tk.BooleanVar()
+            self._charm_vars[cid] = {"var": var, "item": charm, "variant_vars": {}}
+
+            _mk_check(self._item_tbl_frame, variable=var,
+                      text=charm.get("korName", charm.get("name", ""))
+                      ).pack(anchor="w", pady=(4, 0))
+
+            variant_f = ttk.Frame(self._item_tbl_frame)
+            variant_f.pack(anchor="w", padx=(20, 0))
+            for variant in charm.get("description_filtered", []):
+                vid = variant.get("variant")
+                if vid is None:
+                    continue
+                vvar = tk.BooleanVar()
+                self._charm_vars[cid]["variant_vars"][vid] = (vvar, variant)
+                _mk_check(variant_f, variable=vvar,
+                          text=f"모양: {variant.get('kor', variant.get('eng',''))}"
+                          ).pack(anchor="w")
 
     # ── Fixed 컨트롤 ─────────────────────────────────────────────
     def _build_fixed_ctrl(self):
@@ -942,7 +989,64 @@ class PriceSearchTab:
             "included":  True,
         } for o in self._added_opts]
 
+    def _search_charm(self, ladder, mode, ethereal) -> list[dict]:
+        """
+        부적 검색: 모양(variant) 미선택 시 부적 id로만 검색,
+        선택 시 모양별로 개별 쿼리 후 결과를 합친다.
+        부적은 항상 magic이지만 traderie 쪽에 rarity 파라미터를 보내지 않는다.
+        """
+        checked = [(cid, d) for cid, d in self._charm_vars.items() if d["var"].get()]
+        if not checked:
+            return []
+        opts_ed = self._build_opts_editable_from_added()
+        url_opts = [{"key": o["key"], "min": o["min"], "max": o["max"]}
+                    for o in self._added_opts]
+        results = []
+        for cid, d in checked:
+            item = d["item"]
+            name_id = item.get("nameId", "")
+            if not name_id:
+                continue
+            selected_variants = [(vid, vinfo) for vid, (vvar, vinfo)
+                                  in d["variant_vars"].items() if vvar.get()]
+
+            url_ctx = {
+                "name_id": name_id, "item_key": cid,
+                "ladder": ladder, "mode": mode, "ethereal": ethereal,
+                "rarity": "charm",
+            }
+            if not selected_variants:
+                ub = TraderieUrlBuilder(name_id, cid)
+                ub.set_common_props(ladder, mode, ethereal)
+                # rarity 파라미터 미사용 (charm은 항상 magic)
+                ub.set_options(url_opts)
+                results.append({
+                    "name":             item.get("korName", item.get("name", "")),
+                    "api_url":          ub.get_base_url(),
+                    "url":              ub.get_real_url(),
+                    "stats":            self._fetch_price_stats(ub.get_base_url()),
+                    "options_editable": opts_ed,
+                    "url_ctx":          url_ctx,
+                })
+            else:
+                for vid, vinfo in selected_variants:
+                    ub = TraderieUrlBuilder(name_id, cid)
+                    ub.set_common_props(ladder, mode, ethereal)
+                    ub.set_options(url_opts)
+                    ub.params['variant'] = vid   # prop_ 접두어 없이 그대로 variant 파라미터
+                    results.append({
+                        "name": f'{item.get("korName","")} ({vinfo.get("kor","")})',
+                        "api_url":          ub.get_base_url(),
+                        "url":              ub.get_real_url(),
+                        "stats":            self._fetch_price_stats(ub.get_base_url()),
+                        "options_editable": opts_ed,
+                        "url_ctx":          {**url_ctx, "extra_params": {"variant": vid}},
+                    })
+        return results
+
     def _search_based(self, rarity, ladder, mode, ethereal) -> list[dict]:
+        if self._selected_ctg == "charm":
+            return self._search_charm(ladder, mode, ethereal)
         checked = [(iid, d) for iid, d in self._item_vars.items() if d["var"].get()]
         if not checked:
             return []
@@ -966,6 +1070,11 @@ class PriceSearchTab:
                 "url":              ub.get_real_url(),
                 "stats":            self._fetch_price_stats(ub.get_base_url()),
                 "options_editable": opts_ed,
+                "url_ctx": {
+                    "name_id": name_id, "item_key": iid,
+                    "ladder": ladder, "mode": mode, "ethereal": ethereal,
+                    "rarity": rarity,
+                },
             })
         return results
 
@@ -1002,6 +1111,7 @@ class PriceSearchTab:
 
         base_key     = item.get("baseItemKey", "")
         selected_bases = [b for b in self._base_item_vars if b["var"].get()]
+        rarity = self._rarity_var.get()
 
         # 룬워드 + 베이스 선택 → 베이스별 개별 검색
         if base_key and selected_bases:
@@ -1017,6 +1127,12 @@ class PriceSearchTab:
                     "url":              ub.get_real_url(),
                     "stats":            self._fetch_price_stats(ub.get_base_url()),
                     "options_editable": opts_ed,
+                    "url_ctx": {
+                        "name_id": item["nameId"], "item_key": item["id"],
+                        "ladder": ladder, "mode": mode, "ethereal": ethereal,
+                        "rarity": rarity,
+                        "extra_params": {f"prop_{base_key}": base["name"]},
+                    },
                 })
             return results
 
@@ -1030,6 +1146,11 @@ class PriceSearchTab:
             "url":              ub.get_real_url(),
             "stats":            fetch_price_stats(ub.get_base_url()),
             "options_editable": opts_ed,
+            "url_ctx": {
+                "name_id": item["nameId"], "item_key": item["id"],
+                "ladder": ladder, "mode": mode, "ethereal": ethereal,
+                "rarity": rarity,
+            },
         }]
 
     # ── 결과 표시 ────────────────────────────────────────────────
@@ -1047,6 +1168,7 @@ class PriceSearchTab:
         url      = res["url"]
         api_url  = res["api_url"]
         opts_ed  = res.get("options_editable", [])
+        url_ctx  = res.get("url_ctx", {})
 
         card = tk.Frame(self._result_f, bg="#333333", bd=0)
         card.pack(fill="x", pady=3, padx=2)
@@ -1082,10 +1204,10 @@ class PriceSearchTab:
         self._update_star_btn(star_btn, in_fav)
 
         def _toggle_fav(btn=star_btn, n=name, u=url, a=api_url,
-                        s=stats, oe=opts_ed):
+                        s=stats, oe=opts_ed, ctx=url_ctx):
             min_p   = s.get("min_text","N/A") if s.get("success") else "N/A"
             max_p   = s.get("max_text","N/A") if s.get("success") else "N/A"
-            added   = self._toggle_fav_cb(n, u, a, min_p, max_p, oe)
+            added   = self._toggle_fav_cb(n, u, a, min_p, max_p, oe, url_ctx=ctx)
             self._update_star_btn(btn, added)
 
         star_btn.config(command=_toggle_fav)

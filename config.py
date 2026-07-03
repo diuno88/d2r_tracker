@@ -106,7 +106,7 @@ CAPTURES_SUBDIR   = _p("captures.subdir",   "D2R_Tracker/captures")
 CAPTURES_FILENAME = _p("captures.filename", "cap_latest.png")
 LOG_DEFAULT_ROOT  = _get_documents_dir()
 
-AI_MODEL_GEMINI = _p("ai.model.gemini", "gemini-2.0-flash")
+AI_MODEL_GEMINI = _p("ai.model.gemini", "gemini-2.5-flash")
 AI_MODEL_GROQ   = _p("ai.model.groq",   "meta-llama/llama-4-scout-17b-16e-instruct")
 
 GITHUB_DATA_URL   = _p("github.data.url",
