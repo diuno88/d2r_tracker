@@ -88,6 +88,7 @@ class TrackerApp:
             self._is_admin = True
             self._is_premium = True
         self._free_scan_count = 0
+        self._free_fav_refresh_count = 0
         self._fav_overlay_paused = False
         self._fav_refresh_after_id = None
         self._fav_overlay_cycle_id = None
@@ -710,7 +711,7 @@ class TrackerApp:
         self.fav_refresh_spin.grid(row=0, column=1, sticky="w")
         self.fav_refresh_spin.bind("<FocusOut>", self._on_fav_refresh_change)
         self.fav_refresh_spin.bind("<Return>", self._on_fav_refresh_change)
-        ttk.Label(c, text="분 (무료: 20회 한도에 포함)", foreground=FG2, font=("맑은 고딕", 10)).grid(
+        ttk.Label(c, text="분 (무료: 자동갱신 10회 한도)", foreground=FG2, font=("맑은 고딕", 10)).grid(
             row=0, column=2, sticky="w")
 
         ttk.Label(c, text="오버레이 표시 주기:", foreground=FG2).grid(
@@ -851,7 +852,7 @@ class TrackerApp:
         # ── 무료 버전 안내 배너 ──
         self._fav_free_banner = tk.Label(
             parent,
-            text="무료버전: 즐겨찾기 최대 3개 / 자동갱신 횟수 한도 포함 / 오버레이 자동순환은 유료 전용입니다.",
+            text="무료버전: 즐겨찾기 최대 3개 / 자동갱신 10회 한도 / 오버레이 자동순환은 유료 전용입니다.",
             bg="#3a3a1a", fg=GOLD, font=("맑은 고딕", 9),
             anchor="w", padx=8, pady=4)
         self._fav_free_banner.grid(row=1, column=0, sticky="ew")
@@ -1720,6 +1721,7 @@ class TrackerApp:
             )
 
     _FREE_FAV_LIMIT = 3
+    _FREE_FAV_REFRESH_LIMIT = 10
 
     def _add_to_favorites(self, iid: str):
         data = self._scan_data.get(iid)
@@ -1739,8 +1741,8 @@ class TrackerApp:
                 return
         # 무료 회원 즐겨찾기 개수 제한
         if not self._is_premium and len(self._favorites) >= self._FREE_FAV_LIMIT:
-            self._append_log(
-                f"즐겨찾기는 무료버전에서 최대 {self._FREE_FAV_LIMIT}개까지 추가 가능합니다.", "warn")
+            self._append_log("무료 계정 즐겨찾기 추가 횟수 초과", "warn")
+            self.overlay.show_error("무료 계정 즐겨찾기 추가 횟수 초과")
             return
         self._favorites.append(data)
         self._save_favorites()
@@ -1768,8 +1770,8 @@ class TrackerApp:
                 return False
         # 무료 회원 즐겨찾기 개수 제한
         if not self._is_premium and len(self._favorites) >= self._FREE_FAV_LIMIT:
-            self._append_log(
-                f"즐겨찾기는 무료버전에서 최대 {self._FREE_FAV_LIMIT}개까지 추가 가능합니다.", "warn")
+            self._append_log("무료 계정 즐겨찾기 추가 횟수 초과", "warn")
+            self.overlay.show_error("무료 계정 즐겨찾기 추가 횟수 초과")
             return False
         self._favorites.append({
             "name":             name,
@@ -2295,14 +2297,16 @@ class TrackerApp:
         interval_ms = self.config.get("fav_refresh_min", 5) * 60 * 1000
 
         def _refresh():
-            # 무료회원: 즐겨찾기 갱신 1회를 스캔 횟수로 차감
+            # 무료회원: 즐겨찾기 자동갱신 전용 횟수 한도 (추적 횟수와 별개)
             if not self._is_premium:
-                used = self._free_scan_count + len(self._favorites)
-                if used > self._FREE_DAILY_LIMIT:
+                used = self._free_fav_refresh_count + len(self._favorites)
+                if used > self._FREE_FAV_REFRESH_LIMIT:
                     self.root.after(0, lambda: self._append_log(
-                        "즐겨찾기 갱신 생략: 무료 횟수 한도 초과", "warn"))
+                        "무료 계정 즐겨찾기 자동갱신 초과", "warn"))
+                    self.root.after(0, lambda: self.overlay.show_error(
+                        "무료 계정 즐겨찾기 자동갱신 초과"))
                     return
-                self._free_scan_count += len(self._favorites)
+                self._free_fav_refresh_count += len(self._favorites)
             for fav in self._favorites:
                 api_url = fav.get("api_url", "")
                 if not api_url:
@@ -2365,9 +2369,11 @@ class TrackerApp:
                 return
             if self._free_scan_count >= self._FREE_DAILY_LIMIT:
                 self.root.after(0, lambda: self._set_status(
-                    f"무료버전 감지 횟수({self._FREE_DAILY_LIMIT}회/실행) 초과"))
+                    "무료계정 아이템감정 횟수 초과( 재시작 or 멤버십 가입시 무제한 )"))
                 self.root.after(0, lambda: self._append_log(
-                    f"무료버전 감지 횟수({self._FREE_DAILY_LIMIT}회/실행)를 초과했습니다. 유료키를 등록하세요.", "warn"))
+                    "무료계정 아이템감정 횟수 초과( 재시작 or 멤버십 가입시 무제한 )", "warn"))
+                self.root.after(0, lambda: self.overlay.show_error(
+                    "무료계정 아이템감정 횟수 초과( 재시작 or 멤버십 가입시 무제한 )"))
                 return
             if self.fav_overlay._running:
                 self.fav_overlay.pause()

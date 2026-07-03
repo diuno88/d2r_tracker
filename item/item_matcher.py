@@ -315,8 +315,46 @@ class ItemMatcher:
                     return charm_type
         return None
 
+    def _strip_charm_suffix(self, key_n: str) -> str:
+        """정규화된 유니크 부적 이름에서 '거대부적/큰부적/작은부적' 등 종류 접미사 제거."""
+        for keyword in CHARM_KEYWORD_MAP:
+            suf = self._normalize(keyword)
+            if suf and key_n.endswith(suf):
+                return key_n[:-len(suf)]
+        return key_n
+
+    def _find_unique_charm_lenient(self, normalized: str) -> Optional[Dict]:
+        """부적 옵션 3줄 이상 감지 시 사용하는 관대한 유니크 부적 매칭.
+        OCR이 이름 뒷부분 단어를 통째로 누락한 경우(예: '파열' 탈락)에도
+        접두사 일치로 구제한다. 검색 범위를 korName에 '부적'이 포함된
+        유니크 부적으로 한정해 오매칭 위험을 낮춘다."""
+        if len(normalized) < 4:
+            return None
+        best_item = None
+        best_score = 0.0
+        for key, item in self.unique_items.items():
+            if '부적' not in key:
+                continue
+            key_n = self._normalize(key)
+            base_n = self._strip_charm_suffix(key_n)
+            if not base_n:
+                continue
+            if base_n.startswith(normalized) or normalized.startswith(base_n):
+                shorter = min(len(base_n), len(normalized))
+                longer = max(len(base_n), len(normalized))
+                score = shorter / longer
+            else:
+                score = self._combined_similarity(normalized, base_n)
+            if score > best_score:
+                best_score = score
+                best_item = item
+        if best_score >= 0.5:
+            return best_item
+        return None
+
     def find_item_key(self, item_name: str, rarity: str,
-                      all_text_lines: List[str] = None) -> Optional[Dict]:
+                      all_text_lines: List[str] = None,
+                      option_line_count: int = 0) -> Optional[Dict]:
         if not item_name:
             return None
 
@@ -326,6 +364,17 @@ class ItemMatcher:
         ocr_charm = self._detect_charm_from_lines(
             [item_name] + (all_text_lines or [])
         )
+
+        # 부적 타입 + 옵션 3줄 이상 = 사실상 확정적 유니크 부적(일반/매직 부적은 옵션 1~2줄).
+        # HSV 등급 오판정이나 이름 인식 손상(단어 누락 등)으로 일반 매칭이 실패해도
+        # 관대한 매칭으로 유니크 DB에서 먼저 구제를 시도한다 (rarity 분기보다 우선).
+        if ocr_charm and option_line_count >= 3:
+            lenient = self._find_unique_charm_lenient(normalized)
+            if lenient:
+                lenient = dict(lenient)
+                lenient['_resolved_rarity'] = 'unique'
+                print(f'[ItemMatcher] 부적 옵션 {option_line_count}줄 → 관대 매칭(unique): "{normalized}"')
+                return lenient
 
         # unique/set/base: affix_kor 복수 variant 먼저 확인 (무지개자락 8종 등)
         if rarity in ('unique', 'set', 'base'):
@@ -372,11 +421,21 @@ class ItemMatcher:
             # 부적 감지: 이름 단독 + 전체 OCR 줄 스캔 (줄 분리 OCR 오류 대응)
             _charm_lines = [item_name] + (all_text_lines or [])
             charm_type = self._detect_charm_from_lines(_charm_lines)
-            if charm_type and charm_type in self.charm_items:
-                charm = dict(self.charm_items[charm_type])
-                charm['_resolved_rarity'] = 'charm'
-                print(f'[ItemMatcher] 부적 감지 → {charm_type}: "{item_name}"')
-                return charm
+            if charm_type:
+                # 부적 타입 감지된 경우: unique_items에서 이름 있는 부적 우선 검색
+                # (HSV가 unique를 rare/magic으로 오판할 수 있으므로 제네릭 확정 전에 먼저 확인)
+                uniq = self._fuzzy_lookup(normalized, self.unique_items, threshold=0.70)
+                if uniq:
+                    uniq = dict(uniq)
+                    uniq['_resolved_rarity'] = 'unique'
+                    print(f'[ItemMatcher] 부적 감지 → 명칭 부적(unique) 매칭: "{normalized}"')
+                    return uniq
+                # 이름 없는 generic 부적
+                if charm_type in self.charm_items:
+                    charm = dict(self.charm_items[charm_type])
+                    charm['_resolved_rarity'] = 'charm'
+                    print(f'[ItemMatcher] 부적 감지 → generic {charm_type}: "{item_name}"')
+                    return charm
 
             # affix_kor 복수 variant 우선 확인 (무지개자락 8종 등)
             prefix_match2 = self._find_by_affix_kor(normalized, all_text_lines or [item_name])
@@ -755,9 +814,12 @@ class ItemMatcher:
         """
         unique/set/runeword: description_filtered DB 기준으로 옵션 구성
         - OCR에서 찾은 실제값 우선, DB 범위 밖이면 DB값 사용
-        - selectable 그룹은 OCR로 매칭된 항목만 포함 (미매칭 후보는 제외)
-        - include_unselected=True면 미매칭 selectable 후보도 included=False로 포함
+        - selectable 그룹(또는 property_group 태그된 택1 그룹)은 OCR로 매칭된 항목만 포함 (미매칭 후보는 제외)
+        - include_unselected=True면 미매칭 그룹 후보도 included=False로 포함
           (즐겨찾기 편집 UI에서 체크박스로 수동 추가할 수 있도록)
+        - 반환값의 'selectable' 필드는 DB 원본 플래그 그대로(UI가 고정값 라벨 vs
+          min/max 편집기 중 무엇을 그릴지 판단하는 용도) — property_group으로 인한
+          택1 포함 로직은 'included'에만 반영되고 'selectable' 값 자체는 바뀌지 않는다.
         반환: [{'key': int, 'min': int, 'max': int, 'name': str,
                'db_min': int, 'db_max': int, 'selectable': bool, 'included': bool}, ...]
         """
@@ -773,10 +835,15 @@ class ItemMatcher:
 
             db_min = db_opt.get('min')
             db_max = db_opt.get('max')
+            # selectable: DB상 순수 택1 플래그 (UI에 고정값으로 표시 — 편집 UI 렌더링용, 그대로 유지)
             selectable = db_opt.get('selectable', False)
+            # group_exclusive: selectable이거나 property_group(A/B/C/D 등) 태그가 있으면
+            # 같은 그룹 중 택1 구조 → OCR로 실제 매칭된 것만 채택 (포함 여부 판단 로직 전용,
+            # UI의 min/max 편집기 표시 여부에는 영향 주지 않도록 selectable 필드는 그대로 둔다)
+            group_exclusive = selectable or bool(db_opt.get('property_group'))
 
-            # 고정값(min==max)은 URL 파라미터 불필요 — selectable=true면 포함
-            if db_min is not None and db_max is not None and db_min == db_max and not selectable:
+            # 고정값(min==max)은 URL 파라미터 불필요 — group_exclusive면 포함
+            if db_min is not None and db_max is not None and db_min == db_max and not group_exclusive:
                 continue
 
             # DB 범위 없는 항목은 스킵
@@ -811,8 +878,8 @@ class ItemMatcher:
                                'db_min': db_min, 'db_max': db_max, 'selectable': selectable,
                                'included': True})
                 print(f'[Matcher] OCR값 적용 prop={prop_id} "{search_name}" → {ocr_val} (DB:{db_min}~{db_max})')
-            elif selectable:
-                # selectable 그룹(예: 직업별 스킬 +N 중 택1)은 OCR로 실제 매칭된 항목만 포함.
+            elif group_exclusive:
+                # selectable/property_group 그룹(예: 직업별 스킬 +N 중 택1)은 OCR로 실제 매칭된 항목만 포함.
                 # 매칭 안 된 후보는 URL에 기본 반영하지 않고, 즐겨찾기 편집 UI에서
                 # 체크박스로 수동 추가할 수 있도록 included=False로만 남겨둔다.
                 print(f'[Matcher] selectable 미매칭 — 제외: prop={prop_id} "{display_name}"')

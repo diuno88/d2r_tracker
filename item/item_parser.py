@@ -104,7 +104,11 @@ class ItemParser:
             }
 
         # 3. Traderie 아이템 키 찾기
-        item_info = self._matcher.find_item_key(item_name, rarity, ocr_lines)
+        # 옵션으로 인식된 라인 수 (부적 판별 시 유니크 여부 신호로 사용)
+        _option_src = ai_options if ai_options else option_lines
+        option_line_count = len(self._extract_options(_option_src))
+        item_info = self._matcher.find_item_key(
+            item_name, rarity, ocr_lines, option_line_count=option_line_count)
 
         if not item_info:
             return {
@@ -167,10 +171,11 @@ class ItemParser:
         url_ctx: dict = {}
 
         # 세계석조각(shard)/열쇠(key): 아이템 키만으로 검색, 옵션 미적용
-        # 유니크 부적: rarity='unique'이면서 ctg='charm' → 옵션 미적용
+        # 유니크 부적(named unique charm)도 description_filtered에 변동옵션 범위가 있으므로
+        # 아래 unique/set/base 분기에서 다른 유니크 아이템과 동일하게 크로스 매칭 적용
         # 동상(statue)은 고정 스탯이 항상 존재하므로 옵션 적용 유지
         # (일반 매직 부적은 rarity='charm'이므로 해당 없음 — 어픽스 옵션 계속 적용)
-        _skip_options = ctg in {'shard', 'key'} or (rarity == 'unique' and ctg == 'charm')
+        _skip_options = ctg in {'shard', 'key'}
         if _skip_options:
             pass  # 옵션 적용 없이 URL 빌더 종료
         # unique/set/base(runeword) → DB description_filtered 기준 변동옵션 크로스 매칭
