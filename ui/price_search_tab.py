@@ -885,7 +885,7 @@ class PriceSearchTab:
         try:
             min_v = max(0, int(float(self._opt_min_var.get() or 0)))
             max_v = max(0, int(float(self._opt_max_var.get() or 0)))
-        except ValueError:
+        except (ValueError, OverflowError):
             min_v = max_v = 0
         self._added_opts.append({"key": key, "name": name, "min": min_v, "max": max_v})
         self._opt_entry.delete(0, "end")
@@ -950,17 +950,46 @@ class PriceSearchTab:
         self._btn_search.config(state="disabled", text="검색 중...")
         self._clear_results()
         self._show_hint("검색 중...")
-        threading.Thread(target=self._search_thread, daemon=True).start()
+        # Tk 변수는 메인 스레드에서만 읽어야 하므로, 백그라운드 검색 스레드를
+        # 시작하기 전에 필요한 선택 상태를 전부 스냅샷으로 떠 둔다.
+        selection = self._snapshot_selection()
+        threading.Thread(target=self._search_thread, args=(selection,), daemon=True).start()
 
-    def _search_thread(self):
+    def _snapshot_selection(self) -> dict:
+        """검색에 필요한 Tk 변수 상태를 메인 스레드에서 미리 읽어 일반 값으로 변환."""
+        return {
+            "rarity":   self._rarity_var.get(),
+            "ladder":   self._get_ladder(),
+            "mode":     self._get_mode(),
+            "ethereal": self._ethereal_var.get(),
+            "checked_items": [
+                (iid, d["item"]) for iid, d in self._item_vars.items() if d["var"].get()
+            ],
+            "checked_charms": [
+                (cid, d["item"], [
+                    (vid, vinfo) for vid, (vvar, vinfo) in d["variant_vars"].items() if vvar.get()
+                ])
+                for cid, d in self._charm_vars.items() if d["var"].get()
+            ],
+            "desc_rows": [
+                {"prop_id": r["prop_id"], "checked": r["check_var"].get(),
+                 "min": r["min_var"].get(), "max": r["max_var"].get(),
+                 "name": r["name"], "db_min": r["db_min"], "db_max": r["db_max"]}
+                for r in self._desc_rows
+            ],
+            "selected_bases": [b for b in self._base_item_vars if b["var"].get()],
+            "added_opts": list(self._added_opts),
+        }
+
+    def _search_thread(self, selection: dict):
         try:
-            rarity   = self._rarity_var.get()
-            ladder   = self._get_ladder()
-            mode     = self._get_mode()
-            ethereal = self._ethereal_var.get()
-            results  = (self._search_based(rarity, ladder, mode, ethereal)
+            rarity   = selection["rarity"]
+            ladder   = selection["ladder"]
+            mode     = selection["mode"]
+            ethereal = selection["ethereal"]
+            results  = (self._search_based(rarity, ladder, mode, ethereal, selection)
                         if rarity in BASED
-                        else self._search_fixed(ladder, mode, ethereal))
+                        else self._search_fixed(ladder, mode, ethereal, selection))
             self._parent.after(0, lambda: self._show_results(results))
         except Exception as e:
             self._parent.after(0, lambda: self._show_hint(f"오류: {e}"))
@@ -976,8 +1005,10 @@ class PriceSearchTab:
                                      current_season=is_cur)
         return fetch_price_stats(api_url)
 
-    def _build_opts_editable_from_added(self) -> list[dict]:
+    def _build_opts_editable_from_added(self, added_opts=None) -> list[dict]:
         """수동 추가 옵션 → options_editable 포맷"""
+        if added_opts is None:
+            added_opts = self._added_opts
         return [{
             "name":      o["name"],
             "key":       o["key"],
@@ -987,28 +1018,26 @@ class PriceSearchTab:
             "max":       o["max"],
             "selectable": False,
             "included":  True,
-        } for o in self._added_opts]
+        } for o in added_opts]
 
-    def _search_charm(self, ladder, mode, ethereal) -> list[dict]:
+    def _search_charm(self, ladder, mode, ethereal, selection: dict) -> list[dict]:
         """
         부적 검색: 모양(variant) 미선택 시 부적 id로만 검색,
         선택 시 모양별로 개별 쿼리 후 결과를 합친다.
         부적은 항상 magic이지만 traderie 쪽에 rarity 파라미터를 보내지 않는다.
         """
-        checked = [(cid, d) for cid, d in self._charm_vars.items() if d["var"].get()]
+        checked = selection["checked_charms"]
         if not checked:
             return []
-        opts_ed = self._build_opts_editable_from_added()
+        added_opts = selection["added_opts"]
+        opts_ed = self._build_opts_editable_from_added(added_opts)
         url_opts = [{"key": o["key"], "min": o["min"], "max": o["max"]}
-                    for o in self._added_opts]
+                    for o in added_opts]
         results = []
-        for cid, d in checked:
-            item = d["item"]
+        for cid, item, selected_variants in checked:
             name_id = item.get("nameId", "")
             if not name_id:
                 continue
-            selected_variants = [(vid, vinfo) for vid, (vvar, vinfo)
-                                  in d["variant_vars"].items() if vvar.get()]
 
             url_ctx = {
                 "name_id": name_id, "item_key": cid,
@@ -1044,17 +1073,17 @@ class PriceSearchTab:
                     })
         return results
 
-    def _search_based(self, rarity, ladder, mode, ethereal) -> list[dict]:
+    def _search_based(self, rarity, ladder, mode, ethereal, selection: dict) -> list[dict]:
         if self._selected_ctg == "charm":
-            return self._search_charm(ladder, mode, ethereal)
-        checked = [(iid, d) for iid, d in self._item_vars.items() if d["var"].get()]
+            return self._search_charm(ladder, mode, ethereal, selection)
+        checked = selection["checked_items"]
         if not checked:
             return []
+        added_opts = selection["added_opts"]
         rarity_param = {"rare": "rare", "magic": "magic"}.get(rarity)
-        opts_ed = self._build_opts_editable_from_added()
+        opts_ed = self._build_opts_editable_from_added(added_opts)
         results = []
-        for iid, d in checked:
-            item    = d["item"]
+        for iid, item in checked:
             name_id = item.get("nameId", "")
             if not name_id:
                 continue
@@ -1063,7 +1092,7 @@ class PriceSearchTab:
             if rarity_param:
                 ub.set_rarity(rarity_param)
             ub.set_options([{"key": o["key"], "min": o["min"], "max": o["max"]}
-                            for o in self._added_opts])
+                            for o in added_opts])
             results.append({
                 "name":             item.get("korName", item.get("name","")),
                 "api_url":          ub.get_base_url(),
@@ -1078,19 +1107,24 @@ class PriceSearchTab:
             })
         return results
 
-    def _search_fixed(self, ladder, mode, ethereal) -> list[dict]:
+    def _search_fixed(self, ladder, mode, ethereal, selection: dict) -> list[dict]:
         item = self._selected_fixed
         if not item or not item.get("nameId"):
             return []
 
+        added_opts = selection["added_opts"]
+
         # 체크된 desc 속성 → URL 파라미터 + options_editable
         desc_url_opts = []
         desc_editable = []
-        for r in self._desc_rows:
-            if not r["check_var"].get():
+        for r in selection["desc_rows"]:
+            if not r["checked"]:
                 continue
-            min_v = max(0, int(float(r["min_var"].get() or 0)))
-            max_v = max(0, int(float(r["max_var"].get() or 0)))
+            try:
+                min_v = max(0, int(float(r["min"] or 0)))
+                max_v = max(0, int(float(r["max"] or 0)))
+            except (ValueError, OverflowError):
+                min_v = max_v = 0
             desc_url_opts.append({"key": r["prop_id"], "min": min_v, "max": max_v})
             desc_editable.append({
                 "name":      r["name"],
@@ -1105,13 +1139,13 @@ class PriceSearchTab:
 
         all_url_opts = desc_url_opts + [
             {"key": o["key"], "min": o["min"], "max": o["max"]}
-            for o in self._added_opts
+            for o in added_opts
         ]
-        opts_ed = desc_editable + self._build_opts_editable_from_added()
+        opts_ed = desc_editable + self._build_opts_editable_from_added(added_opts)
 
         base_key     = item.get("baseItemKey", "")
-        selected_bases = [b for b in self._base_item_vars if b["var"].get()]
-        rarity = self._rarity_var.get()
+        selected_bases = selection["selected_bases"]
+        rarity = selection["rarity"]
 
         # 룬워드 + 베이스 선택 → 베이스별 개별 검색
         if base_key and selected_bases:
@@ -1144,7 +1178,7 @@ class PriceSearchTab:
             "name":             item.get("korName",""),
             "api_url":          ub.get_base_url(),
             "url":              ub.get_real_url(),
-            "stats":            fetch_price_stats(ub.get_base_url()),
+            "stats":            self._fetch_price_stats(ub.get_base_url()),
             "options_editable": opts_ed,
             "url_ctx": {
                 "name_id": item["nameId"], "item_key": item["id"],

@@ -830,7 +830,7 @@ class ItemMatcher:
         result = []
         for db_opt in description_filtered:
             prop_id = db_opt.get('property_id')
-            if not prop_id:
+            if prop_id is None:
                 continue
 
             db_min = db_opt.get('min')
@@ -1091,6 +1091,9 @@ class ItemMatcher:
             return []
 
         base_kor = self._normalize(base_item.get('korName', ''))
+        if not base_kor:
+            print(f'[ItemMatcher] base_item에 korName 없음, 어픽스 추출 불가: {base_item}')
+            return []
 
         # 아이템명 줄 탐색: 한글이 없거나(파일명/시스템 문구 등) 보관함 UI 문구인 줄은
         # 건너뛴다. 앞쪽 3줄로 제한하지 않는 이유: OCR/AI가 파일명·UI 잡음을

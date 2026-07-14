@@ -135,9 +135,10 @@ class ItemParser:
 
         item_key = item_info.get('id') or item_info.get('key')
         name_id = item_info.get('nameId') or item_info.get('name_id') or \
-                  self._to_name_id(item_info.get('name', item_name))
+                  self._to_name_id(item_info.get('name') or item_name) or \
+                  str(item_key or '')
 
-        if not item_key or not name_id:
+        if not item_key:
             return {
                 'success': False,
                 'item_name': item_name,

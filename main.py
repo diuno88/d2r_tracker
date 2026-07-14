@@ -2312,7 +2312,7 @@ class TrackerApp:
                 if not api_url:
                     continue
                 try:
-                    s_start, s_end = self._get_season_dates()
+                    s_start, s_end, _ = self._get_season_dates()
                     stats = fetch_price_stats(api_url, season_start=s_start, season_end=s_end)
                     if stats.get("success") and stats.get("count", 0) > 0:
                         fav["min_price"] = stats.get("min_text", "N/A")

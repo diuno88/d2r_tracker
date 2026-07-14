@@ -317,7 +317,10 @@ class AIVisionBridge:
                         ),
                     ])
                 ],
-                config=genai_types.GenerateContentConfig(max_output_tokens=800),
+                config=genai_types.GenerateContentConfig(
+                    max_output_tokens=800,
+                    http_options=genai_types.HttpOptions(timeout=30000),  # ms 단위
+                ),
             )
             text = response.text or ''
             return self._parse_text(text, provider='gemini')
