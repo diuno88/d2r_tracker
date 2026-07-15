@@ -332,6 +332,8 @@ class AIVisionBridge:
             if ('503' in err_str or 'unavailable' in err_str or 'overloaded' in err_str
                     or 'high demand' in err_str):
                 raise ProviderUnavailableError('gemini', str(e))
+            if 'api_key_invalid' in err_str or 'api key not valid' in err_str:
+                raise RuntimeError('Gemini API 키가 유효하지 않습니다. 설정 창에서 키를 다시 확인해주세요.')
             raise
 
     # ──────────────────────────────────────────
@@ -380,7 +382,7 @@ class AIVisionBridge:
 
         except groq_sdk.RateLimitError:
             raise QuotaExceededError('groq')
-        except groq_sdk.AuthenticationError as e:
-            raise RuntimeError(f'Groq 인증 실패: {e}')
+        except groq_sdk.AuthenticationError:
+            raise RuntimeError('Groq API 키가 유효하지 않습니다. 설정 창에서 키를 다시 확인해주세요.')
 
 
