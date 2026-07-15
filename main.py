@@ -34,6 +34,7 @@ from utils.ui_helpers import mk_check
 from ui.overlay import (ResultOverlay, FavoriteOverlay, set_overlay_colors, set_overlay_font_extra)
 from ui.price_search_tab import PriceSearchTab
 from utils.tracker_logger import TrackerLogger
+from utils.error_logger import log_error, log_success
 
 
 BG    = "#2b2b2b"
@@ -2727,6 +2728,7 @@ class TrackerApp:
                 slot=_sl, on_fav=_fav, is_fav=_if))
 
             self.logger.write(item_name, traderie_url, min_price, max_price)
+            log_success(f'{item_name} | {traderie_url} | {min_price} / {max_price}')
 
             if from_file:
                 self.root.after(0, lambda: self._set_status("이미지 분석 완료"))
@@ -2742,6 +2744,7 @@ class TrackerApp:
             err_msg  = str(e)
             full_tb  = traceback.format_exc()
             print(f"[Tracker] 처리 오류 전체 트레이스:\n{full_tb}")
+            log_error("처리 오류", e)
             self.root.after(0, lambda: self._set_status(f"오류: {err_msg}"))
             self.root.after(0, lambda m=err_msg: self._append_log(f"처리 오류: {m}", "error"))
             self.root.after(0, lambda tb=full_tb: self._append_log(tb, "error"))

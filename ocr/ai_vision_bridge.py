@@ -12,6 +12,7 @@ from typing import Optional, Callable
 
 from config import load_ai_keys, load_config, save_config, save_ai_keys, \
     AI_MODEL_GEMINI, AI_MODEL_GROQ, DEFAULT_PROVIDER_ORDER
+from utils.error_logger import log_error, log_success
 
 PROVIDER_NAMES = {
     'gemini': 'Gemini 2.5 Flash',
@@ -135,7 +136,10 @@ class AIVisionBridge:
                 for i, line in enumerate(lines):
                     self._log(f'  [{i}] {line}')
                 if not lines:
-                    raise RuntimeError(f'AI가 텍스트를 반환하지 않았습니다 (rawText: {raw[:150]})')
+                    err = RuntimeError(f'AI가 텍스트를 반환하지 않았습니다 (rawText: {raw[:150]})')
+                    log_error(f'{provider} 빈 결과', err)
+                    raise err
+                log_success(f'{provider} 성공 - {len(lines)}줄 - rawText({len(raw)}자): {raw[:300]}')
                 return result
 
             except QuotaExceededError as qe:
@@ -144,6 +148,7 @@ class AIVisionBridge:
                 msg = f'{PROVIDER_NAMES[provider]} {reason} → 다음 제공자로 전환{detail}'
                 self._log(msg)
                 self._notify_status(msg)
+                log_error(msg)
                 self._exhausted.add(provider)
                 self._provider_idx = idx + 1
                 self._save_provider()
@@ -153,6 +158,7 @@ class AIVisionBridge:
                 msg = f'{PROVIDER_NAMES[provider]} 오류: {e}'
                 self._log(msg)
                 self._notify_status(msg)
+                log_error(f'{provider} 처리 오류', e)
                 return {'success': False, 'lines': [], 'rawText': '', 'linesWithBbox': [],
                         'provider': provider, 'error': str(e)}
 
@@ -163,6 +169,7 @@ class AIVisionBridge:
         else:
             msg = f'설정된 AI({", ".join(PROVIDER_NAMES[p] for p in configured)})의 할당량이 모두 소진됐습니다. "AI 리셋" 버튼을 눌러주세요.'
         self._log(msg)
+        log_error(msg)
         return {'success': False, 'lines': [], 'rawText': '', 'linesWithBbox': [],
                 'provider': 'none', 'error': msg}
 
@@ -333,7 +340,9 @@ class AIVisionBridge:
                     or 'high demand' in err_str):
                 raise ProviderUnavailableError('gemini', str(e))
             if 'api_key_invalid' in err_str or 'api key not valid' in err_str:
+                log_error('Gemini API 키 오류', e)
                 raise RuntimeError('Gemini API 키가 유효하지 않습니다. 설정 창에서 키를 다시 확인해주세요.')
+            log_error('Gemini 처리 중 알 수 없는 오류', e)
             raise
 
     # ──────────────────────────────────────────
@@ -380,9 +389,11 @@ class AIVisionBridge:
             text = response.choices[0].message.content or ''
             return self._parse_text(text, provider='groq')
 
-        except groq_sdk.RateLimitError:
+        except groq_sdk.RateLimitError as e:
+            log_error('Groq 할당량 초과', e)
             raise QuotaExceededError('groq')
-        except groq_sdk.AuthenticationError:
+        except groq_sdk.AuthenticationError as e:
+            log_error('Groq API 키 오류', e)
             raise RuntimeError('Groq API 키가 유효하지 않습니다. 설정 창에서 키를 다시 확인해주세요.')
 
 
