@@ -3,7 +3,7 @@ D2R Traderie Tracker
 메인 UI (tkinter) + 앱 진입점
 """
 import tkinter as tk
-from tkinter import ttk, filedialog, colorchooser
+from tkinter import ttk, filedialog, colorchooser, messagebox
 import threading
 import queue
 import json
@@ -34,7 +34,7 @@ from utils.ui_helpers import mk_check
 from ui.overlay import (ResultOverlay, FavoriteOverlay, set_overlay_colors, set_overlay_font_extra)
 from ui.price_search_tab import PriceSearchTab
 from utils.tracker_logger import TrackerLogger
-from utils.error_logger import log_error, log_success
+from utils.error_logger import log_error, log_success, get_log_dir
 
 
 BG    = "#2b2b2b"
@@ -650,6 +650,13 @@ class TrackerApp:
         self.lbl_log_path = ttk.Label(c, text="", foreground="#666",
                                        font=("맑은 고딕", 10), wraplength=300)
         self.lbl_log_path.grid(row=1, column=0, columnspan=3, sticky="w")
+
+        self.btn_error_log_folder = tk.Button(c, text="오류로그파일폴더",
+                                               bg="#444", fg=FG2,
+                                               font=("맑은 고딕", 10),
+                                               relief="flat", cursor="hand2",
+                                               command=self._open_error_log_folder)
+        self.btn_error_log_folder.grid(row=2, column=0, columnspan=3, sticky="w", pady=(6, 0))
 
         # 데이터
         c = self._add_settings_section(sf, row, "데이터")
@@ -1563,6 +1570,14 @@ class TrackerApp:
             self.lbl_log_path.config(text=path, foreground="#888")
         else:
             self.lbl_log_path.config(text="(로그 비활성화)", foreground="#555")
+
+    def _open_error_log_folder(self):
+        log_dir = get_log_dir()
+        try:
+            log_dir.mkdir(parents=True, exist_ok=True)
+            os.startfile(str(log_dir))
+        except Exception as e:
+            messagebox.showerror("오류", f"로그 폴더를 열 수 없습니다:\n{e}")
 
     # ────────────────────── 데이터 업데이트 ──────────────────────
     def _auto_update_data(self):

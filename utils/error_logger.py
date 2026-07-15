@@ -43,3 +43,7 @@ def log_error(context: str, exc: Exception = None):
 def log_success(context: str):
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     _write(_SUCCESS_LOG, f"[{ts}] {context}\n")
+
+
+def get_log_dir() -> Path:
+    return _LOG_DIR
