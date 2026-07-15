@@ -251,7 +251,10 @@ def capture_around_mouse(proc_info: Optional[ProcessInfo] = None,
         return img, region, (mx, my)
 
     except Exception:
-        img, region = _capture_fallback(proc_info)
+        try:
+            img, region = _capture_fallback(proc_info)
+        except Exception as fallback_exc:
+            raise RuntimeError(f"화면 캡처 실패 (fallback도 실패): {fallback_exc}") from fallback_exc
         mx, my = get_mouse_pos()
         return img, region, (mx, my)
 

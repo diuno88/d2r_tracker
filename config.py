@@ -4,6 +4,7 @@ Tracker 설정 관리
 경로 설정은 path.properties 파일에서 관리
 """
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -208,9 +209,19 @@ def load_config() -> dict:
     return DEFAULT_CONFIG.copy()
 
 
+def _atomic_write_json(path: Path, data) -> None:
+    """임시 파일에 먼저 쓰고 os.replace로 원자적 교체 — 저장 중 크래시/강제종료 시
+    기존 파일이 잘린 채로 남아 손상되는 것을 방지."""
+    tmp_path = path.with_suffix(path.suffix + ".tmp")
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_path, path)
+
+
 def save_config(config: dict):
-    with open(CONFIG_FILE, "w", encoding="utf-8") as f:
-        json.dump(config, f, ensure_ascii=False, indent=2)
+    _atomic_write_json(CONFIG_FILE, config)
 
 
 DEFAULT_PROVIDER_ORDER = ["groq", "gemini"]
@@ -245,5 +256,4 @@ def load_ai_keys() -> dict:
 
 
 def save_ai_keys(keys: dict):
-    with open(AI_KEYS_FILE, "w", encoding="utf-8") as f:
-        json.dump(keys, f, ensure_ascii=False, indent=2)
+    _atomic_write_json(AI_KEYS_FILE, keys)
